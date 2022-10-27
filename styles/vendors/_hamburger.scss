@@ -1,0 +1,53 @@
+.hamburger__button {
+  width: 32px;
+  height: 32px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  gap: 0.6rem;
+
+  z-index: 10;
+
+  margin-top: 0.5rem;
+
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+
+  .hamburger__input__bar {
+    width: 100%;
+    height: 1px;
+
+    background-color: #fff;
+    transition: all 0.3s ease-in-out;
+    &:nth-child(1) {
+      width: 80%;
+    }
+    &:nth-child(2) {
+      width: 60%;
+      align-self: flex-start;
+    }
+    &:nth-child(3) {
+      width: 70%;
+    }
+  }
+}
+
+.hamburger__button.active {
+  overflow-x: hidden;
+  .hamburger__input__bar {
+    background-color: #182131;
+    &:nth-child(1) {
+      transform: rotate(45deg) translate(8px, 7px);
+      width: 100%;
+    }
+    &:nth-child(2) {
+      transform: rotate(-45deg);
+      width: 100%;
+    }
+    &:nth-child(3) {
+      opacity: 0;
+    }
+  }
+}

@@ -1,0 +1,62 @@
+/*——————————————————————
+
+[Table of contents]f
+
+1. Colors
+2. Variables
+3. Typography
+4. Utilities
+5. Mixins
+
+——————————————————————-*/
+
+/* ===COLORS=== */
+:root {
+  --clr-white: #fff;
+
+  --font-montserrat: 'Montserrat', sans-serif;
+  --font-quicksand: 'Quicksand', sans-serif;
+}
+
+/* ===TYPOGRAPHY CHANGES=== */
+* {
+  font-family: var(--font-quicksand);
+}
+
+/* ===UTILITIES=== */
+.sr-only {
+  padding: auto;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.max-wrapper {
+  width: 85%;
+  max-width: 1440px;
+  margin-inline: auto;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.parallax {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* ===MIXINS=== */
+@mixin truncate($lines: 2) {
+  display: -webkit-box;
+  -webkit-line-clamp: $lines;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
