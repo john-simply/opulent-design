@@ -156,14 +156,14 @@ img {
 
 @font-face {
   font-family: "Century Gothic";
-  src: url("../core/fonts/CenturyGothic-Bold.woff") format("woff2"), url("../core/fonts/CenturyGothic-Bold.woff2") format("woff");
+  src: url("../core/fonts/CenturyGothic-Bold.woff") format("woff2"), url("./core/fonts/CenturyGothic-Bold.woff2") format("woff");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Century Gothic";
-  src: url("../core/fonts/CenturyGothic.woff") format("woff2"), url("../core/fonts/CenturyGothic.woff2") format("woff");
+  src: url("./core/fonts/CenturyGothic.woff") format("woff2"), url("./core/fonts/CenturyGothic.woff2") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -182,11 +182,12 @@ img {
 /* ===COLORS=== */
 :root {
   --clr-white: #fff;
+  --clr-black: #182131;
   --clr-primary-gold: #c6984c;
 }
 
 /* ===TYPOGRAPHY CHANGES=== */
-* {
+body {
   font-family: "Century Gothic";
 }
 
@@ -232,17 +233,16 @@ img {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  gap: 0.6rem;
   z-index: 10;
-  margin-top: 0.5rem;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
 .hamburger__button .hamburger__input__bar {
   width: 100%;
   height: 1px;
-  background-color: #fff;
+  background-color: var(--clr-white);
   transition: all 0.3s ease-in-out;
+  margin-top: 0.6rem;
 }
 .hamburger__button .hamburger__input__bar:nth-child(1) {
   width: 80%;
@@ -259,7 +259,7 @@ img {
   overflow-x: hidden;
 }
 .hamburger__button.active .hamburger__input__bar {
-  background-color: #182131;
+  background-color: var(--clr-black);
 }
 .hamburger__button.active .hamburger__input__bar:nth-child(1) {
   transform: rotate(45deg) translate(8px, 7px);
@@ -372,4 +372,5 @@ body {
 }
 .main-header .main-navigation__list li a {
   text-transform: uppercase;
+  color: var(--clr-black);
 }/*# sourceMappingURL=style.css.map */

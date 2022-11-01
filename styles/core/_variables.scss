@@ -3,7 +3,7 @@
 @font-face {
   font-family: 'Century Gothic';
   src: url('../core/fonts/CenturyGothic-Bold.woff') format('woff2'),
-    url('../core/fonts/CenturyGothic-Bold.woff2') format('woff');
+    url('./core/fonts/CenturyGothic-Bold.woff2') format('woff');
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -11,8 +11,8 @@
 
 @font-face {
   font-family: 'Century Gothic';
-  src: url('../core/fonts/CenturyGothic.woff') format('woff2'),
-    url('../core/fonts/CenturyGothic.woff2') format('woff');
+  src: url('./core/fonts/CenturyGothic.woff') format('woff2'),
+    url('./core/fonts/CenturyGothic.woff2') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -33,11 +33,13 @@
 /* ===COLORS=== */
 :root {
   --clr-white: #fff;
+  --clr-black: #182131;
   --clr-primary-gold: #c6984c;
 }
 
 /* ===TYPOGRAPHY CHANGES=== */
-* {
+
+body {
   font-family: 'Century Gothic';
 }
 

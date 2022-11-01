@@ -6,11 +6,7 @@
   flex-direction: column;
   align-items: flex-end;
 
-  gap: 0.6rem;
-
   z-index: 10;
-
-  margin-top: 0.5rem;
 
   cursor: pointer;
   transition: all 0.3s ease-in-out;
@@ -19,8 +15,10 @@
     width: 100%;
     height: 1px;
 
-    background-color: #fff;
+    background-color: var(--clr-white);
     transition: all 0.3s ease-in-out;
+    margin-top: 0.6rem;
+
     &:nth-child(1) {
       width: 80%;
     }
@@ -37,7 +35,7 @@
 .hamburger__button.active {
   overflow-x: hidden;
   .hamburger__input__bar {
-    background-color: #182131;
+    background-color: var(--clr-black);
     &:nth-child(1) {
       transform: rotate(45deg) translate(8px, 7px);
       width: 100%;
