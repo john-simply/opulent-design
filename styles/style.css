@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 * {
   box-sizing: border-box;
 }
@@ -153,6 +154,20 @@ img {
      object-fit: cover;
 }
 
+@font-face {
+  font-family: "Century Gothic";
+  src: url("../core/fonts/CenturyGothic-Bold.woff") format("woff2"), url("../core/fonts/CenturyGothic-Bold.woff2") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Century Gothic";
+  src: url("../core/fonts/CenturyGothic.woff") format("woff2"), url("../core/fonts/CenturyGothic.woff2") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 /*——————————————————————
 
 [Table of contents]f
@@ -167,13 +182,17 @@ img {
 /* ===COLORS=== */
 :root {
   --clr-white: #fff;
-  --font-montserrat: "Montserrat", sans-serif;
-  --font-quicksand: "Quicksand", sans-serif;
+  --clr-primary-gold: #c6984c;
 }
 
 /* ===TYPOGRAPHY CHANGES=== */
 * {
-  font-family: var(--font-quicksand);
+  font-family: "Century Gothic";
+}
+
+.material-icons-outlined,
+.material-symbols-outlined {
+  font-family: "Material Icons";
 }
 
 /* ===UTILITIES=== */
@@ -252,6 +271,50 @@ img {
 }
 .hamburger__button.active .hamburger__input__bar:nth-child(3) {
   opacity: 0;
+}
+
+.navigation__button {
+  text-transform: uppercase;
+  position: relative;
+  font-size: 1.1rem;
+  transform: translateY(0%);
+  opacity: 1;
+  display: inline-block;
+  padding: 1rem 2rem;
+  cursor: pointer;
+}
+.navigation__button::after, .navigation__button::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 2px solid;
+  transition: all 0.6s ease;
+  border-radius: 2px;
+}
+.navigation__button::after {
+  bottom: 0;
+  right: 0;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-bottom-color: var(--clr-primary-gold);
+  border-right-color: var(--clr-primary-gold);
+}
+.navigation__button::before {
+  top: 0;
+  left: 0;
+  border-bottom-color: transparent;
+  border-right-color: transparent;
+  border-top-color: var(--clr-primary-gold);
+  border-left-color: var(--clr-primary-gold);
+}
+.navigation__button:hover, .navigation__button:focus {
+  outline: none;
+}
+.navigation__button:hover::before, .navigation__button:hover::after, .navigation__button:focus::before, .navigation__button:focus::after {
+  width: 20%;
+  height: 20%;
 }
 
 /*——————————————————————

@@ -1,0 +1,53 @@
+$border-color: var(--clr-primary-gold);
+
+.navigation__button {
+  text-transform: uppercase;
+
+  position: relative;
+  font-size: 1.1rem;
+
+  transform: translateY(0%);
+  opacity: 1;
+
+  display: inline-block;
+  padding: 1rem 2rem;
+
+  cursor: pointer;
+  &::after,
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 2px solid;
+    transition: all 0.6s ease;
+    border-radius: 2px;
+  }
+  &::after {
+    bottom: 0;
+    right: 0;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-bottom-color: $border-color;
+    border-right-color: $border-color;
+  }
+  &::before {
+    top: 0;
+    left: 0;
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+    border-top-color: $border-color;
+    border-left-color: $border-color;
+  }
+  // State Changes
+  &:hover,
+  &:focus {
+    outline: none;
+    &::before,
+    &::after {
+      width: 20%;
+      height: 20%;
+    }
+  }
+}

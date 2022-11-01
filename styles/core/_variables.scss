@@ -1,3 +1,23 @@
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+@font-face {
+  font-family: 'Century Gothic';
+  src: url('../core/fonts/CenturyGothic-Bold.woff') format('woff2'),
+    url('../core/fonts/CenturyGothic-Bold.woff2') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Century Gothic';
+  src: url('../core/fonts/CenturyGothic.woff') format('woff2'),
+    url('../core/fonts/CenturyGothic.woff2') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 /*——————————————————————
 
 [Table of contents]f
@@ -13,14 +33,17 @@
 /* ===COLORS=== */
 :root {
   --clr-white: #fff;
-
-  --font-montserrat: 'Montserrat', sans-serif;
-  --font-quicksand: 'Quicksand', sans-serif;
+  --clr-primary-gold: #c6984c;
 }
 
 /* ===TYPOGRAPHY CHANGES=== */
 * {
-  font-family: var(--font-quicksand);
+  font-family: 'Century Gothic';
+}
+
+.material-icons-outlined,
+.material-symbols-outlined {
+  font-family: 'Material Icons';
 }
 
 /* ===UTILITIES=== */
