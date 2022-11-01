@@ -443,7 +443,7 @@ body {
   margin-top: 1.5rem;
   font-size: 1.1rem;
   line-height: 150%;
-  max-width: 400px;
+  max-width: 300px;
   margin-inline: auto;
 }
 .main-content .lift-wrapper__content .explore-button {
@@ -484,9 +484,16 @@ body {
 .main-content .lift-wrapper__image-wrapper img {
   max-width: 300px;
 }
+@media (min-width: 768px) {
+  .main-content .lift-wrapper__content .text {
+    max-width: 400px;
+    font-size: 1.2rem;
+  }
+}
 @media (min-width: 1024px) {
   .main-content {
     background-image: url("../images/black-carbon.jpg");
+    height: calc(100vh + 12rem);
   }
   .main-content .lift-wrapper {
     display: grid;
@@ -494,7 +501,7 @@ body {
     grid-template-areas: "buttons buttons buttons empty empty empty" "image image image content content content";
     max-width: 1024px;
     margin-inline: auto;
-    padding-top: unset;
+    padding-bottom: 12rem;
   }
   .main-content .lift-wrapper__content {
     grid-area: content;
@@ -533,12 +540,13 @@ body {
   .main-content .lift-wrapper {
     width: calc(100% - 8rem);
     max-width: 1920px;
-    grid-template-columns: repeat(8, 1fr);
-    grid-template-areas: "buttons image image image image content content content";
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-areas: "buttons image image image image content content content content";
+    padding-bottom: 5rem;
   }
   .main-content .lift-wrapper__content .heading {
     font-size: clamp(3rem, 3vw, 4rem);
-    max-width: unset;
+    max-width: 600px;
   }
   .main-content .lift-wrapper__content .text {
     font-size: 1.2rem;
@@ -547,15 +555,30 @@ body {
     transform: rotate(-90deg);
     font-size: 1.2rem;
     width: 250px;
+    text-align: left;
   }
   .main-content .lift-wrapper__buttons .text-wrapper {
-    margin-right: -8rem;
+    margin-right: -20rem;
     order: 1;
   }
   .main-content .lift-wrapper__buttons .text-wrapper p {
     width: 450px;
   }
-  .main-content .lift-wrapper__image-wrapper img {
+  .main-content .lift-wrapper__image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 800px;
     max-width: 700px;
   }
+  .main-content .lift-wrapper__image-wrapper img {
+    position: absolute;
+    left: 0px;
+    max-width: 700px;
+  }
+}
+
+.suppliers-block {
+  width: 100%;
+  height: 100vh;
+  background-color: tomato;
 }/*# sourceMappingURL=style.css.map */
