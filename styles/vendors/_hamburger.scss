@@ -49,3 +49,9 @@
     }
   }
 }
+
+@include laptop() {
+  .hamburger__button {
+    display: none;
+  }
+}

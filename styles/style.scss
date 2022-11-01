@@ -71,3 +71,47 @@ body {
     }
   }
 }
+
+@include laptop() {
+  .main-header {
+    padding: 2rem;
+
+    .main-navigation {
+      // reset styles
+      position: relative;
+      top: unset;
+      left: unset;
+      transform: unset;
+      height: unset;
+      width: unset;
+      background-color: unset;
+
+      &__list {
+        display: flex;
+        align-items: center;
+        li {
+          margin-top: unset;
+          margin-left: 1.5rem;
+          a {
+            color: var(--clr-white);
+          }
+        }
+      }
+    }
+  }
+}
+
+@include desktop() {
+  .main-header {
+    .main-navigation {
+      &__list {
+        li {
+          margin-left: 2rem;
+          a {
+            font-size: 1.2rem;
+          }
+        }
+      }
+    }
+  }
+}
