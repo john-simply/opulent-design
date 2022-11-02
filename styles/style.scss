@@ -746,4 +746,21 @@ body {
 
 /*===FOOTER=== */
 footer {
+  .footer-wrapper {
+    &__contacts {
+      .contact-list {
+        .member-info {
+        }
+      }
+    }
+
+    &__links {
+    }
+
+    &__socials {
+    }
+  }
+
+  .company-copy {
+  }
 }
