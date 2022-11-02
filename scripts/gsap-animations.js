@@ -82,7 +82,7 @@ menuTimeline.from(menuItems, {
   ease: 'power1',
 });
 
-window.addEventListener('load',`` () => {
+window.addEventListener('load', () => {
   if (document.querySelector('.lift-wrapper')) {
     liftScrollInit();
   }

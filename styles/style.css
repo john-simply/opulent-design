@@ -1278,4 +1278,81 @@ footer .company-copy .aztec-copy {
   font-size: 4rem;
   color: var(--clr-white);
   font-weight: bold;
+}
+
+.about-section {
+  background-color: var(--clr-white);
+  text-align: left;
+  color: var(--clr-black);
+}
+.about-section__wrapper {
+  margin-bottom: 5rem;
+  margin-top: 5rem;
+}
+.about-section__content {
+  width: calc(100% - 4rem);
+  margin-inline: auto;
+}
+.about-section__content .heading {
+  color: #5f5d5d;
+  font-size: 2rem;
+  font-weight: bold;
+}
+.about-section__content .text {
+  margin-top: 2rem;
+  line-height: 150%;
+  font-size: 1.2rem;
+}
+.about-section__content .text strong {
+  display: block;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  color: #5f5d5d;
+}
+.about-section__image-block {
+  margin-top: 2rem;
+}
+.about-section__image-block .image-wrapper img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 300px;
+  display: block;
+}
+.about-section__image-block .text {
+  margin-inline: auto;
+  margin-top: 2rem;
+  width: calc(100% - 4rem);
+  line-height: 150%;
+  font-size: 1.2rem;
+}
+.about-section__image-block .text strong {
+  display: block;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  color: #5f5d5d;
+  font-size: 1.4rem;
+}
+@media (min-width: 768px) {
+  .about-section__content {
+    width: 80%;
+    margin-inline: auto;
+    text-align: center;
+  }
+  .about-section__image-block .image-wrapper {
+    max-width: 650px;
+    margin-inline: auto;
+  }
+  .about-section__image-block .text {
+    text-align: center;
+    width: calc(100% - 4rem);
+    max-width: 820px;
+  }
+}
+@media (min-width: 1440px) {
+  .about-section__content {
+    width: 50%;
+  }
+  .about-section__content .text {
+    line-height: 180%;
+  }
 }/*# sourceMappingURL=style.css.map */
