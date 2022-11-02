@@ -67,7 +67,22 @@ const liftScrollInit = () => {
   });
 };
 
-window.addEventListener('load', () => {
+const menuTimeline = gsap.timeline({ paused: true });
+const navigationMenu = document.querySelector('.main-navigation');
+const menuItems = document.querySelectorAll('.main-navigation__list li');
+
+menuTimeline.to(navigationMenu, {
+  x: 0,
+});
+
+menuTimeline.from(menuItems, {
+  y: -50,
+  opacity: 0,
+  stagger: 0.2,
+  ease: 'power1',
+});
+
+window.addEventListener('load',`` () => {
   if (document.querySelector('.lift-wrapper')) {
     liftScrollInit();
   }

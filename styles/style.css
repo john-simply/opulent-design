@@ -549,7 +549,7 @@ body {
     position: relative;
     top: unset;
     left: unset;
-    transform: unset;
+    transform: unset !important;
     height: unset;
     width: unset;
     background-color: unset;
@@ -559,6 +559,8 @@ body {
     align-items: center;
   }
   .main-header .main-navigation__list li {
+    opacity: unset !important;
+    transform: unset !important;
     margin-top: unset;
     margin-left: 1.5rem;
   }

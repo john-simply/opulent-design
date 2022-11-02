@@ -1,23 +1,21 @@
 const toggleMainNavigation = () => {
+  // elements to animate
   const navigationButton = document.querySelector('.hamburger__button');
-  const navigationMenu = document.querySelector('.main-navigation');
-
-  document.querySelector('body').classList.toggle('overflow-hidden');
 
   if (navigationButton.classList.contains('active')) {
     navigationButton.classList.remove('active');
-    // Close Navigation
-
     setTimeout(() => {
-      document.querySelector('html').style.overflowY = 'scroll';
+      document.querySelector('body').style.overflowY = 'scroll';
     }, 1000);
 
-    navigationMenu.style.transform = 'translateX(100%)';
-  } else {
-    document.querySelector('html').style.overflowY = 'hidden';
-    navigationButton.classList.add('active');
+    menuTimeline.reverse();
 
-    navigationMenu.style.transform = 'translateX(0%)';
+    // navigationMenu.style.transform = 'translateX(100%)';
+  } else {
+    document.querySelector('body').style.overflowY = 'hidden';
+    navigationButton.classList.add('active');
+    // navigationMenu.style.transform = 'translateX(0%)';
+    menuTimeline.play();
   }
 };
 

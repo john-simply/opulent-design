@@ -98,7 +98,7 @@ body {
       position: relative;
       top: unset;
       left: unset;
-      transform: unset;
+      transform: unset !important;
       height: unset;
       width: unset;
       background-color: unset;
@@ -107,9 +107,11 @@ body {
         display: flex;
         align-items: center;
         li {
+          opacity: unset !important;
+          transform: unset !important;
+
           margin-top: unset;
           margin-left: 1.5rem;
-
           .active {
             border-color: var(--clr-primary-gold);
           }
