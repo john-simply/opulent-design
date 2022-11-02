@@ -44,7 +44,7 @@
       <nav class="main-navigation">
         <ul class="main-navigation__list" aria-expanded="false">
           <li>
-            <a href="/">Home</a>
+            <a class="active" href="/">Home</a>
           </li>
           <li>
             <a href="/">About Us</a>
@@ -58,7 +58,7 @@
           <li>
             <a href="/">Suppliers</a>
           </li>
-          <li class="navigation__button">
+          <li class="navigation-button">
             <a href="/">Contact Us</a>
           </li>
         </ul>
@@ -83,13 +83,13 @@
 
         <!-- Lift Swapper -->
         <div class="lift-wrapper__buttons">
-          <button id="previous-btn">
+          <button id="previous-btn" onclick="changeLift(false)">
             <span class="material-icons-outlined">chevron_left</span>
           </button>
           <div class="text-wrapper">
-            <p>Cabin - Ocean Blue <span>03 / 05</span></p>
+            <p>Cabin - Ocean Blue <span>01 / 05</span></p>
           </div>
-          <button id="next-btn">
+          <button id="next-btn" onclick="changeLift(true)">
             <span class="material-icons-outlined">chevron_right</span>
           </button>
         </div>
@@ -98,7 +98,7 @@
         <figure class="lift-wrapper__image-wrapper">
           <img
             id="product-lift"
-            src="./images/lifts/product-image-3.png"
+            src="./images/lifts/product-image-1.png"
             alt=""
           />
         </figure>
@@ -115,7 +115,7 @@
               clients, designers and architects, we create lift cabins that are
               unique and luxurious, in complete harmony with their surroundings.
             </p>
-            <a class="navigation__button"> View Suppliers </a>
+            <a class="navigation-button"> View Suppliers </a>
           </div>
         </div>
       </section>
@@ -172,13 +172,13 @@
           <div class="splide__arrows">
             <button
               class="splide__arrow splide__arrow--prev"
-              onclick="changeLiftDisplay(false)"
+              onclick="changeLift(false)"
             >
               <span class="material-icons-outlined">chevron_left</span>
             </button>
             <button
               class="splide__arrow splide__arrow--next"
-              onclick="changeLiftDisplay(true)"
+              onclick="changeLift(true)"
             >
               <span class="material-icons-outlined">chevron_right</span>
             </button>
@@ -186,6 +186,12 @@
 
           <div class="splide__track">
             <ul class="splide__list">
+              <li class="splide__slide">
+                <img src="./images/lifts/product-image-1.png" alt="" />
+              </li>
+              <li class="splide__slide">
+                <img src="./images/lifts/product-image-2.png" alt="" />
+              </li>
               <li class="splide__slide">
                 <img src="./images/lifts/product-image-3.png" alt="" />
               </li>
@@ -195,17 +201,11 @@
               <li class="splide__slide">
                 <img src="./images/lifts/product-image-5.png" alt="" />
               </li>
-              <li class="splide__slide">
-                <img src="./images/lifts/product-image-1.png" alt="" />
-              </li>
-              <li class="splide__slide">
-                <img src="./images/lifts/product-image-2.png" alt="" />
-              </li>
             </ul>
           </div>
         </div>
 
-        <h4 id="lift-label" class="lift-label">Deep Ocean</h4>
+        <h4 id="lift-label" class="lift-label">Ocean Blue</h4>
       </section>
 
       <footer>

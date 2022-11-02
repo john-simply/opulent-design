@@ -2,7 +2,6 @@ gsap.registerPlugin(ScrollTrigger);
 
 const liftAnimation = (direction) => {
   const isScrollingDown = direction === 1;
-  console.log('yes');
   return gsap.to('#product-lift', {
     y: isScrollingDown ? '100vh' : '0vh',
     transformOrigin: 'top bottom',
@@ -39,7 +38,7 @@ const liftScrollInit = () => {
         setTimeout(() => {
           arrows.style.transform = 'translateY(100vh)';
         }, 500);
-      } else {
+      } else if (window.screen.width >= 1440) {
         const arrows = document.querySelector(
           '.main-content .lift-wrapper__buttons'
         );
@@ -58,7 +57,7 @@ const liftScrollInit = () => {
         setTimeout(() => {
           arrows.style.transform = 'translateY(0vh)';
         }, 500);
-      } else {
+      } else if (window.screen.width >= 1440) {
         const arrows = document.querySelector(
           '.main-content .lift-wrapper__buttons'
         );

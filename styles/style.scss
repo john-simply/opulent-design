@@ -24,6 +24,22 @@ body {
 
   background-color: #1c1c1c;
   height: 100vh;
+
+  @include laptop() {
+    &::-webkit-scrollbar {
+      width: 12px; /* width of the entire scrollbar */
+    }
+
+    &::-webkit-scrollbar-track {
+      background: #222; /* color of the tracking area */
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--clr-primary-gold); /* color of the scroll thumb */
+      border-radius: 20px; /* roundness of the scroll thumb */
+      border: 3px solid var(--clr-black); /* creates padding around scroll thumb */
+    }
+  }
 }
 
 /*===MAIN MENU NAVIGATION=== */
@@ -65,7 +81,7 @@ body {
     &__list {
       text-align: center;
       li {
-        margin-top: 1.5rem;
+        margin-top: 2rem;
         a {
           text-transform: uppercase;
           color: var(--clr-black);
@@ -93,8 +109,27 @@ body {
         li {
           margin-top: unset;
           margin-left: 1.5rem;
+
+          .active {
+            border-color: var(--clr-primary-gold);
+          }
+
           a {
             color: var(--clr-white);
+            border-top: 2px solid transparent;
+            transition: border-color 0.2s ease-in-out;
+
+            padding-top: 0.25rem;
+
+            &:hover {
+              border-color: rgba(240, 178, 77, 0.4);
+            }
+          }
+
+          &:last-child {
+            a {
+              border-top: 0;
+            }
           }
         }
       }
@@ -102,6 +137,10 @@ body {
   }
 
   @include desktop() {
+    .company-logo {
+      width: 250px;
+    }
+
     .main-navigation {
       &__list {
         li {
@@ -384,7 +423,7 @@ body {
       }
     }
 
-    .navigation__button {
+    .navigation-button {
       margin-top: 2rem;
     }
   }
@@ -437,7 +476,7 @@ body {
         }
       }
 
-      .navigation__button {
+      .navigation-button {
         margin-top: 5rem;
         max-width: 150px;
         text-align: center;
@@ -643,6 +682,9 @@ body {
 
 /*===CARBON SPLIDER=== */
 .carbon-lift-slider {
+  position: relative;
+  z-index: 2;
+
   padding-top: 3rem;
   padding-bottom: 5rem;
   background-image: url('../images/black-carbon.jpg');
@@ -746,6 +788,8 @@ body {
 
 /*===FOOTER=== */
 footer {
+  position: relative;
+
   background-color: #eae7e7;
   width: 100%;
 
@@ -753,6 +797,7 @@ footer {
 
   padding-top: 5rem;
   padding-bottom: 2rem;
+
   .footer-wrapper {
     .heading {
       display: inline-block;

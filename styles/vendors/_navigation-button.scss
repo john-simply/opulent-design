@@ -1,6 +1,6 @@
 $border-color: var(--clr-primary-gold);
 
-.navigation__button {
+.navigation-button {
   text-transform: uppercase;
 
   position: relative;
@@ -18,11 +18,10 @@ $border-color: var(--clr-primary-gold);
     content: '';
     display: block;
     position: absolute;
-    width: 100%;
-    height: 100%;
+    width: 98%;
+    height: 91%;
     border: 2px solid;
     transition: all 0.6s ease;
-    border-radius: 2px;
   }
   &::after {
     bottom: 0;
