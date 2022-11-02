@@ -661,7 +661,7 @@ body {
   }
 
   .carbon__splide {
-    width: 100%;
+    width: 90%;
     max-width: 1500px;
     margin: auto;
     padding-top: 2rem;
@@ -680,12 +680,12 @@ body {
       button {
         span {
           font-size: 1.4rem;
-          // border: 1px solid var(--clr-gold-600);
           padding: 0.2rem;
           cursor: pointer;
 
+          transition: all 0.2s ease-in-out;
           &:hover {
-            color: var(--clr-gold-200);
+            color: var(--clr-primary-gold);
           }
         }
       }
@@ -746,21 +746,232 @@ body {
 
 /*===FOOTER=== */
 footer {
+  background-color: #eae7e7;
+  width: 100%;
+
+  color: var(--clr-black);
+
+  padding-top: 5rem;
+  padding-bottom: 2rem;
   .footer-wrapper {
+    .heading {
+      display: inline-block;
+
+      font-size: 1.4rem;
+      font-weight: bold;
+      border-bottom: 2px solid var(--clr-primary-gold);
+    }
+
     &__contacts {
       .contact-list {
+        a {
+          transition: color 0.2s ease-in-out;
+          &:hover {
+            color: var(--clr-primary-gold);
+          }
+        }
+
         .member-info {
+          margin-top: 2rem;
+
+          &:first-child {
+            margin-top: 1rem;
+          }
+
+          .name {
+            font-weight: bold;
+            font-size: 1.1rem;
+          }
+
+          .title {
+            font-size: 0.9rem;
+            margin-top: 0.25rem;
+            margin-bottom: 1rem;
+            opacity: 0.8;
+            font-weight: bold;
+          }
+
+          .email,
+          .phone {
+            display: inline-block;
+            margin-top: 0.5rem;
+
+            display: flex;
+            justify-content: center;
+            opacity: 0.8;
+            span {
+              margin-right: 0.5rem;
+              color: var(--clr-primary-gold);
+            }
+          }
         }
       }
     }
 
     &__links {
+      display: none;
+
+      margin-top: 2rem;
+
+      a {
+        border-bottom: 1px solid transparent;
+        transition: border-color 0.2s ease-in-out;
+        &:hover {
+          border-color: var(--clr-primary-gold);
+        }
+      }
+
+      .links-list {
+        .link {
+          margin-top: 0.75rem;
+        }
+      }
     }
 
     &__socials {
+      margin-top: 2rem;
+
+      a {
+        border-bottom: 1px solid transparent;
+        transition: border-color 0.2s ease-in-out;
+        &:hover {
+          border-color: var(--clr-primary-gold);
+        }
+      }
+
+      .socials-list {
+        .social {
+          margin-top: 0.75rem;
+        }
+      }
     }
   }
 
   .company-copy {
+    margin-top: 4rem;
+    font-size: 0.8rem;
+
+    a {
+      border-bottom: 1px solid var(--clr-primary-gold);
+      transition: color 0.2s ease-in-out;
+      &:hover {
+        color: var(--clr-primary-gold);
+      }
+    }
+
+    .policy {
+      display: inline-block;
+      margin-top: 1rem;
+    }
+
+    .aztec-copy {
+      margin-top: 1rem;
+    }
+  }
+
+  @include laptop() {
+    .footer-wrapper {
+      display: flex;
+      width: calc(100% - 4rem);
+      max-width: 1440px;
+      margin-inline: auto;
+
+      .heading {
+        border: unset;
+        display: flex;
+        align-items: center;
+
+        margin-bottom: 2rem;
+
+        &::before {
+          content: '';
+          display: block;
+          width: 50px;
+          height: 2px;
+
+          background-color: var(--clr-primary-gold);
+          margin-right: 0.5rem;
+        }
+      }
+
+      &__contacts {
+        text-align: left;
+        margin-right: 8rem;
+
+        .contact-list {
+          .member-info {
+            .phone,
+            .email {
+              justify-content: flex-start;
+            }
+          }
+        }
+      }
+
+      &__links {
+        display: block;
+        margin-top: 0rem;
+
+        .link {
+          text-align: left;
+          font-size: 1.2rem;
+          margin-bottom: 1.5rem;
+        }
+      }
+
+      &__socials {
+        margin-top: 0rem;
+        text-align: left;
+        font-size: 1.2rem;
+        margin-left: 8rem;
+        .social {
+          margin-bottom: 1.5rem;
+        }
+      }
+    }
+
+    .company-copy {
+      text-align: left;
+
+      display: flex;
+      flex-direction: row;
+      width: calc(100% - 4rem);
+      max-width: 1500px;
+      margin-inline: auto;
+      .policy,
+      .aztec-copy {
+        margin-top: 0;
+      }
+
+      .policy {
+        margin-right: auto;
+        margin-left: 1.5rem;
+      }
+    }
+  }
+
+  @include desktop() {
+    padding-bottom: 3rem;
+
+    background-image: url('../images/footer-logo.svg');
+    background-repeat: no-repeat;
+    background-size: 30%;
+    background-position: calc(100% + 7rem) calc(100% + 7rem);
+
+    .footer-wrapper {
+      &__links {
+        margin-left: 5rem;
+      }
+
+      &__socials {
+        margin-left: 10rem;
+      }
+    }
+
+    .company-copy {
+      .aztec-copy {
+        margin-right: 20rem;
+      }
+    }
   }
 }
