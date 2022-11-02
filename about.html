@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- gsap scripts -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"
+      integrity="sha384-GWpeQQCx59oy0AZxNeVcLrX+Nqpg3dhEoBT/ynclm8lAsrgtZfh/GqUAEuOG1gYA"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"
+      integrity="sha384-YERp0leS9gec08SXfRcJ7P+5G0R/bOBvRotlUTlI5Oxg2d/egqnOV3Sn4eDcCVjO"
+      crossorigin="anonymous"
+      defer
+    ></script>
+
+    <script src="./scripts/splide.min.js" defer></script>
+    <script src="./scripts/gsap-animations.js" defer></script>
+    <script src="./scripts/app.js" defer></script>
+
+    <link rel="stylesheet" href="./styles/style.css" />
+
+    <title>Boilerplate Project</title>
+  </head>
+  <body>
+    <header class="main-header">
+      <figure class="company-logo">
+        <a href="">
+          <img src="./images/logo.svg" alt="Opulent Design International" />
+        </a>
+      </figure>
+
+      <button class="hamburger__button" onclick="toggleMainNavigation()">
+        <span class="hamburger__input__bar"></span>
+        <span class="hamburger__input__bar"></span>
+        <span class="hamburger__input__bar"></span>
+      </button>
+
+      <nav class="main-navigation">
+        <ul class="main-navigation__list" aria-expanded="false">
+          <li>
+            <a class="active" href="/">Home</a>
+          </li>
+          <li>
+            <a href="/">About Us</a>
+          </li>
+          <li>
+            <a href="/">Projects</a>
+          </li>
+          <li>
+            <a href="/">News & Events</a>
+          </li>
+          <li>
+            <a href="/">Suppliers</a>
+          </li>
+          <li class="navigation-button">
+            <a href="/">Contact Us</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="landing-hero">
+        <figure
+          style="--about-background: url('../images/heros/about-us.jpg')"
+          class="landing-hero__background parallax"
+        >
+          <div class="gradient"></div>
+          <!-- <img src="./images/heros/about-us.jpg" alt="" /> -->
+        </figure>
+        <div class="landing-hero__content">
+          <h1 class="heading">About Us</h1>
+        </div>
+      </section>
+
+      <section class="about-section">
+        <h2 class="heading">
+          Who we are, what we do and why our carbon lifts define excellence.
+        </h2>
+        <p class="text">
+          Opulent Designs is the only company providing bespoke carbon fibre
+          lift cabins and shafts, delivering an exciting and innovative product
+          to the ultra-luxury residential and superyacht sectors. We will
+          deliver an exclusive product to each client, sculpting our lift cabins
+          to reflect their vision through bespoke selection of the colour, weave
+          pattern and design of the carbon fibre, and exclusive and opulent
+          floor, ceiling and handrail finishes.
+        </p>
+        <p class="text">
+          <strong>
+            The result is a moving piece of art, a collector's item.
+          </strong>
+          Opulent Design' carbon fibre lift cabins and shafts are built for the
+          company in the UK by carbon fibre designer and manufacturer
+          Supernatural-X Ltd.
+        </p>
+      </section>
+    </main>
+  </body>
+</html>
