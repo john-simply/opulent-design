@@ -18,3 +18,21 @@ const toggleMainNavigation = () => {
     navigationMenu.style.transform = 'translateX(0%)';
   }
 };
+
+if (!!document.querySelector('.carbon__splide')) {
+  carbonSplide = new Splide('.carbon__splide', {
+    type: 'loop',
+    pagination: false,
+    drag: false,
+    keyboard: false,
+    perPage: 3,
+    focus: 'center',
+    breakpoints: {
+      1024: {
+        perPage: 1,
+      },
+    },
+  });
+
+  carbonSplide.mount();
+}
