@@ -582,5 +582,108 @@ body {
   place-items: center;
   width: 100%;
   height: 100vh;
-  background-color: tomato;
+}
+.suppliers-block__content .heading {
+  font-weight: bold;
+  font-size: 2rem;
+  line-height: 120%;
+  max-width: 300px;
+  margin-inline: auto;
+  margin-top: 2rem;
+}
+@media (min-width: 768px) {
+  .suppliers-block__content .heading {
+    font-size: 3rem;
+    max-width: 500px;
+  }
+}
+.suppliers-block__content .sub-heading {
+  border-bottom: 1px solid var(--clr-primary-gold);
+  padding-bottom: 0.2rem;
+  letter-spacing: 0.2rem;
+  color: #c9c9c9;
+}
+.suppliers-block__content .text {
+  margin-top: 1.5rem;
+  font-size: 1.1rem;
+  line-height: 150%;
+  width: 80%;
+  max-width: 600px;
+  margin-inline: auto;
+}
+.suppliers-block__content .explore-button {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+.suppliers-block__content .explore-button span {
+  margin-left: 0.5rem;
+  color: var(--clr-primary-gold);
+}
+.suppliers-block__content .navigation__button {
+  margin-top: 2rem;
+}
+@media (min-width: 1024px) {
+  .suppliers-block {
+    background-image: url("../images/black-carbon.jpg");
+  }
+  .suppliers-block__wrapper {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-areas: "empty empty empty content content content";
+    max-width: 1024px;
+    margin-inline: auto;
+    padding-bottom: 12rem;
+  }
+  .suppliers-block__content {
+    grid-area: content;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .suppliers-block__content .heading {
+    margin-left: 0;
+  }
+  .suppliers-block__content .text {
+    margin-left: 0;
+    margin-top: 2rem;
+  }
+  .suppliers-block__content .sub-heading {
+    border: unset;
+    padding-bottom: unset;
+    display: flex;
+    align-items: center;
+  }
+  .suppliers-block__content .sub-heading::before {
+    content: "";
+    display: block;
+    background-color: var(--clr-primary-gold);
+    width: 75px;
+    height: 1px;
+    margin-right: 1rem;
+  }
+  .suppliers-block__content .navigation__button {
+    margin-top: 5rem;
+    max-width: 150px;
+    text-align: center;
+  }
+}
+@media (min-width: 1440px) {
+  .suppliers-block__wrapper {
+    width: calc(100% - 8rem);
+    max-width: 1920px;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-areas: "buttons image image image image content content content content";
+    padding-bottom: 5rem;
+  }
+  .suppliers-block__content .heading {
+    font-size: clamp(3rem, 3vw, 4rem);
+    max-width: 600px;
+  }
+  .suppliers-block__content .text {
+    font-size: 1.2rem;
+  }
 }/*# sourceMappingURL=style.css.map */

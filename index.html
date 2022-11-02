@@ -5,7 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <script src="./scripts/app.js"></script>
+    <!-- gsap scripts -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"
+      integrity="sha384-GWpeQQCx59oy0AZxNeVcLrX+Nqpg3dhEoBT/ynclm8lAsrgtZfh/GqUAEuOG1gYA"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"
+      integrity="sha384-YERp0leS9gec08SXfRcJ7P+5G0R/bOBvRotlUTlI5Oxg2d/egqnOV3Sn4eDcCVjO"
+      crossorigin="anonymous"
+      defer
+    ></script>
+
+    <script src="./scripts/gsap-animations.js" defer></script>
+    <script src="./scripts/app.js" defer></script>
 
     <link rel="stylesheet" href="./styles/style.css" />
 
@@ -80,23 +95,27 @@
 
         <!-- End of Lift Swapper -->
         <figure class="lift-wrapper__image-wrapper">
-          <img src="./images/lifts/product-image-3.png" alt="" />
+          <img
+            id="product-lift"
+            src="./images/lifts/product-image-3.png"
+            alt=""
+          />
         </figure>
       </section>
 
       <div class="suppliers-block">
-        <div class="suppliers-block__content">
-          <h1 class="heading">
-            Introducing carbon fibre lift cabins and shafts - a world first
-          </h1>
-          <p class="text">
-            Innovative and exciting, carbon fibre lift cabins offer unparalleled
-            design flexibility to deliver a client's unique vision.
-          </p>
-          <a class="explore-button">
-            Explore Our Lifts
-            <span class="material-icons-outlined">expand_more</span>
-          </a>
+        <div class="suppliers-block__wrapper">
+          <div class="suppliers-block__content">
+            <span class="sub-heading">DETAILS DEFINE EXCELLENCE</span>
+            <h2 class="heading">Flexible Design</h2>
+            <p class="text">
+              The simplicity of the design and special qualities of carbon fibre
+              provide virtually unlimited creative freedom. Working with
+              clients, designers and architects, we create lift cabins that are
+              unique and luxurious, in complete harmony with their surroundings.
+            </p>
+            <a class="navigation__button"> View Suppliers </a>
+          </div>
         </div>
       </div>
     </main>

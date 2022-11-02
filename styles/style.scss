@@ -332,5 +332,134 @@ body {
   width: 100%;
   height: 100vh;
 
-  background-color: tomato;
+  &__content {
+    .heading {
+      font-weight: bold;
+      font-size: 2rem;
+      line-height: 120%;
+
+      max-width: 300px;
+      margin-inline: auto;
+      margin-top: 2rem;
+
+      @include tablet() {
+        font-size: 3rem;
+        max-width: 500px;
+      }
+    }
+
+    .sub-heading {
+      border-bottom: 1px solid var(--clr-primary-gold);
+      padding-bottom: 0.2rem;
+      letter-spacing: 0.2rem;
+      color: #c9c9c9;
+    }
+
+    .text {
+      margin-top: 1.5rem;
+      font-size: 1.1rem;
+      line-height: 150%;
+
+      width: 80%;
+      max-width: 600px;
+      margin-inline: auto;
+    }
+
+    .explore-button {
+      margin-top: 1.5rem;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      font-weight: bold;
+      span {
+        margin-left: 0.5rem;
+        color: var(--clr-primary-gold);
+      }
+    }
+
+    .navigation__button {
+      margin-top: 2rem;
+    }
+  }
+
+  @include laptop() {
+    background-image: url('../images/black-carbon.jpg');
+
+    &__wrapper {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      grid-template-areas: 'empty empty empty content content content';
+
+      max-width: 1024px;
+      margin-inline: auto;
+
+      padding-bottom: 12rem;
+    }
+
+    &__content {
+      grid-area: content;
+      text-align: left;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      .heading {
+        margin-left: 0;
+      }
+
+      .text {
+        margin-left: 0;
+        margin-top: 2rem;
+      }
+
+      .sub-heading {
+        border: unset;
+        padding-bottom: unset;
+
+        display: flex;
+        align-items: center;
+
+        &::before {
+          content: '';
+          display: block;
+          background-color: var(--clr-primary-gold);
+          width: 75px;
+          height: 1px;
+          margin-right: 1rem;
+        }
+      }
+
+      .navigation__button {
+        margin-top: 5rem;
+        max-width: 150px;
+        text-align: center;
+      }
+    }
+  }
+
+  @include desktop() {
+    &__wrapper {
+      width: calc(100% - 8rem);
+      max-width: 1920px;
+
+      grid-template-columns: repeat(9, 1fr);
+      grid-template-areas: 'buttons image image image image content content content content';
+
+      padding-bottom: 5rem;
+    }
+
+    &__content {
+      .heading {
+        font-size: clamp(3rem, 3vw, 4rem);
+        max-width: 600px;
+      }
+
+      .text {
+        font-size: 1.2rem;
+      }
+    }
+  }
 }
