@@ -434,6 +434,7 @@ body {
 
   @include laptop() {
     background-image: url('../images/black-carbon.jpg');
+    background-size: contain;
 
     &__wrapper {
       display: grid;

@@ -877,6 +877,7 @@ body {
 @media (min-width: 1024px) {
   .suppliers-block {
     background-image: url("../images/black-carbon.jpg");
+    background-size: contain;
   }
   .suppliers-block__wrapper {
     display: grid;
