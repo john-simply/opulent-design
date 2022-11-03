@@ -57,7 +57,21 @@ function changeLift(isNext) {
       liftLabels[currentIndex - 1].label
     } <span>0${currentIndex} / 0${liftLabels.length}</span>`;
 
-    liftImage.src = `./images/lifts/product-image-${currentIndex}.png`;
+    setTimeout(() => {
+      liftImage.src = `./images/lifts/product-image-${currentIndex}.png`;
+    }, 800);
+  }
+
+  if (isNext) {
+    liftImage.style.transform = 'translateY(-120%)';
+    setTimeout(() => {
+      liftImage.style.transform = 'translateY(0%)';
+    }, 900);
+  } else {
+    liftImage.style.transform = 'translateY(120%)';
+    setTimeout(() => {
+      liftImage.style.transform = 'translateY(0%)';
+    }, 900);
   }
 
   // splide changes
@@ -127,7 +141,7 @@ if (!!document.querySelector('.carbon__splide')) {
   carbonSplide.mount();
 }
 
-// needs reversing
+// NEEDS REVERSING?
 gsap.to('.main-header', {
   backgroundColor: '#272727',
   ease: 'ease',
@@ -139,6 +153,7 @@ gsap.to('.main-header', {
   },
 });
 
+// MEGA MENU FOR PROJECTS
 const imageContainer = document.querySelector('.mega-menu__image-wrapper');
 const megaImage = document.querySelector('.mega-menu__image');
 const crossFade = document.querySelector('.cross-fade-image');

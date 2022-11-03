@@ -857,8 +857,10 @@ body {
   }
   .main-content .lift-wrapper__image-wrapper {
     grid-area: image;
+    overflow: hidden;
   }
   .main-content .lift-wrapper__image-wrapper img {
+    transition: transform 0.8s ease-in-out;
     max-width: 500px;
   }
 }

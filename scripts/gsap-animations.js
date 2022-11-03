@@ -2,7 +2,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const liftAnimation = (direction) => {
   const isScrollingDown = direction === 1;
-  return gsap.to('#product-lift', {
+  return gsap.to('.lift-wrapper__image-wrapper', {
     y: isScrollingDown ? '100vh' : '0vh',
     transformOrigin: 'top bottom',
     ease: 'power1',
