@@ -1076,11 +1076,14 @@ body {
 /*===FOOTER=== */
 footer {
   position: relative;
-  background-color: #eae7e7;
   width: 100%;
+  background-color: #eae7e7;
   color: var(--clr-black);
   padding-top: 5rem;
   padding-bottom: 2rem;
+}
+footer .footer-wrapper {
+  text-align: center;
 }
 footer .footer-wrapper .heading {
   display: inline-block;
@@ -1154,6 +1157,7 @@ footer .footer-wrapper__socials .socials-list .social {
 footer .company-copy {
   margin-top: 4rem;
   font-size: 0.8rem;
+  text-align: center;
 }
 footer .company-copy a {
   border-bottom: 1px solid var(--clr-primary-gold);
@@ -1255,6 +1259,7 @@ footer .company-copy .aztec-copy {
 /*===ABOUT US LANDING HERO=== */
 .landing-hero {
   height: 100vh;
+  width: 100%;
 }
 .landing-hero__background {
   background-image: var(--about-background);
@@ -1280,14 +1285,15 @@ footer .company-copy .aztec-copy {
   font-weight: bold;
 }
 
+/*===ABOUT SECTION CONTENT=== */
 .about-section {
   background-color: var(--clr-white);
-  text-align: left;
   color: var(--clr-black);
+  text-align: left;
 }
 .about-section__wrapper {
-  margin-bottom: 5rem;
-  margin-top: 5rem;
+  padding-bottom: 5rem;
+  padding-top: 5rem;
 }
 .about-section__content {
   width: calc(100% - 4rem);
@@ -1333,19 +1339,9 @@ footer .company-copy .aztec-copy {
   font-size: 1.4rem;
 }
 @media (min-width: 768px) {
-  .about-section__content {
-    width: 80%;
+  .about-section .image-block-wrapper {
+    max-width: 1440px;
     margin-inline: auto;
-    text-align: center;
-  }
-  .about-section__image-block .image-wrapper {
-    max-width: 650px;
-    margin-inline: auto;
-  }
-  .about-section__image-block .text {
-    text-align: center;
-    width: calc(100% - 4rem);
-    max-width: 820px;
   }
 }
 @media (min-width: 1440px) {
