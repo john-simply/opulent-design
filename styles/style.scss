@@ -520,7 +520,7 @@ body {
 
   background-color: #eae7e7;
   background-image: url('../images/white-carbon.png');
-  background-size: cover;
+  background-size: contain;
 
   width: 100%;
   &__content {
@@ -686,6 +686,7 @@ body {
   padding-top: 3rem;
   padding-bottom: 5rem;
   background-image: url('../images/black-carbon.jpg');
+  background-size: cover;
 
   color: var(--clr-white);
 
