@@ -1417,9 +1417,14 @@ footer .company-copy .aztec-copy {
   text-align: center;
 }
 .project-hero__content .heading {
-  font-size: 4rem;
+  font-size: 3.5rem;
   color: var(--clr-white);
   font-weight: bold;
+}
+@media (min-width: 768px) {
+  .project-hero__content .heading {
+    font-size: 4rem;
+  }
 }
 
 .advantages-block {
@@ -1469,6 +1474,12 @@ footer .company-copy .aztec-copy {
   display: flex;
   align-items: center;
   line-height: 150%;
+}
+@media (min-width: 768px) {
+  .advantages-block__content .heading {
+    font-size: 2rem;
+    max-width: 500px;
+  }
 }
 @media (min-width: 1024px) {
   .advantages-block__content {

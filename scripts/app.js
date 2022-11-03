@@ -52,11 +52,13 @@ function changeLift(isNext) {
   changeIndexing(isNext);
 
   // landing content changes
-  liftText.innerHTML = `Cabin - ${
-    liftLabels[currentIndex - 1].label
-  } <span>0${currentIndex} / 0${liftLabels.length}</span>`;
+  if (liftText) {
+    liftText.innerHTML = `Cabin - ${
+      liftLabels[currentIndex - 1].label
+    } <span>0${currentIndex} / 0${liftLabels.length}</span>`;
 
-  liftImage.src = `./images/lifts/product-image-${currentIndex}.png`;
+    liftImage.src = `./images/lifts/product-image-${currentIndex}.png`;
+  }
 
   // splide changes
   const label = document.querySelector('.lift-label');

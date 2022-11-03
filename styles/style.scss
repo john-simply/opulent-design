@@ -1207,9 +1207,17 @@ footer {
   &__content {
     text-align: center;
     .heading {
-      font-size: 4rem;
+      font-size: 3.5rem;
       color: var(--clr-white);
       font-weight: bold;
+    }
+  }
+
+  @include tablet() {
+    &__content {
+      .heading {
+        font-size: 4rem;
+      }
     }
   }
 }
@@ -1265,6 +1273,15 @@ footer {
           align-items: center;
           line-height: 150%;
         }
+      }
+    }
+  }
+
+  @include tablet() {
+    &__content {
+      .heading {
+        font-size: 2rem;
+        max-width: 500px;
       }
     }
   }
