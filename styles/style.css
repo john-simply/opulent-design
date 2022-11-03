@@ -1158,6 +1158,17 @@ footer .footer-wrapper__socials a:hover {
 }
 footer .footer-wrapper__socials .socials-list .social {
   margin-top: 0.75rem;
+  display: flex;
+  align-items: center;
+}
+footer .footer-wrapper__socials .socials-list .social:hover svg {
+  fill: var(--clr-primary-gold);
+}
+footer .footer-wrapper__socials .socials-list .social svg {
+  width: 24px;
+  height: 24px;
+  margin-right: 0.75rem;
+  transition: fill 0.3s ease-in-out;
 }
 footer .company-copy {
   margin-top: 4rem;

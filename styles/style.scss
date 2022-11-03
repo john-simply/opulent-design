@@ -886,6 +886,22 @@ footer {
       .socials-list {
         .social {
           margin-top: 0.75rem;
+          display: flex;
+          align-items: center;
+
+          &:hover {
+            svg {
+              fill: var(--clr-primary-gold);
+            }
+          }
+
+          svg {
+            width: 24px;
+            height: 24px;
+
+            margin-right: 0.75rem;
+            transition: fill 0.3s ease-in-out;
+          }
         }
       }
     }
