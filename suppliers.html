@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- gsap scripts -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"
+      integrity="sha384-GWpeQQCx59oy0AZxNeVcLrX+Nqpg3dhEoBT/ynclm8lAsrgtZfh/GqUAEuOG1gYA"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"
+      integrity="sha384-YERp0leS9gec08SXfRcJ7P+5G0R/bOBvRotlUTlI5Oxg2d/egqnOV3Sn4eDcCVjO"
+      crossorigin="anonymous"
+      defer
+    ></script>
+
+    <script src="./scripts/splide.min.js" defer></script>
+    <script src="./scripts/gsap-animations.js" defer></script>
+    <script src="./scripts/app.js" defer></script>
+
+    <link rel="stylesheet" href="./styles/style.css" />
+
+    <title>Boilerplate Project</title>
+  </head>
+  <body>
+    <header class="main-header">
+      <figure class="company-logo">
+        <a href="">
+          <img src="./images/logo.svg" alt="Opulent Design International" />
+        </a>
+      </figure>
+
+      <button class="hamburger__button" onclick="toggleMainNavigation()">
+        <span class="hamburger__input__bar"></span>
+        <span class="hamburger__input__bar"></span>
+        <span class="hamburger__input__bar"></span>
+      </button>
+
+      <nav class="main-navigation">
+        <ul class="main-navigation__list" aria-expanded="false">
+          <li>
+            <a class="active" href="/">Home</a>
+          </li>
+          <li>
+            <a href="/">About Us</a>
+          </li>
+          <li>
+            <a href="/">Projects</a>
+          </li>
+          <li>
+            <a href="/">News & Events</a>
+          </li>
+          <li>
+            <a href="/">Suppliers</a>
+          </li>
+          <li class="navigation-button">
+            <a href="/">Contact Us</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="landing-hero">
+        <figure
+          style="--about-background: url('../images/heros/fancy-car.png')"
+          class="landing-hero__background parallax"
+        >
+          <div class="gradient"></div>
+        </figure>
+        <div class="landing-hero__content">
+          <h1 class="heading">Our Key Suppliers</h1>
+        </div>
+      </section>
+
+      <section class="suppliers-list">
+        <div class="suppliers-list__content">
+          <h2 class="heading">Delivering The Best</h2>
+
+          <ul class="suppliers-list__list">
+            <li>
+              <a href="">
+                <article class="supplier">
+                  <figure class="image-wrapper">
+                    <img src="./images/applications/automotive.jpg" alt="" />
+                    <figcaption class="heading">Supernatural-X Ltd</figcaption>
+                    <div class="gradient"></div>
+                  </figure>
+
+                  <div class="supplier-content">
+                    <h3 class="heading">
+                      Manufacture of our carbon fibre lifts
+                    </h3>
+                    <p class="text">
+                      Supernatural is a UK based design, engineering and
+                      manufacturing company, specialising in low to mid volume
+                      production of composite components and assemblies serving
+                      sectors such as automotive, motorsport, aerospace and
+                      marine. It delivers world-leading carbon fibre products to
+                      some of the world's best known companies including Mclaren
+                      and Aston Martin.
+                    </p>
+                    <div href="/" class="navigation-button">Discover</div>
+                  </div>
+                </article>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <article class="supplier">
+                  <figure class="image-wrapper">
+                    <img src="./images/applications/hotel.jpg" alt="" />
+                    <figcaption class="heading">Supernatural-X Ltd</figcaption>
+                    <div class="gradient"></div>
+                  </figure>
+
+                  <div class="supplier-content">
+                    <h3 class="heading">
+                      INSTALLATION OF OUR CARBON FIBRE LIFTS FOR SUPERYACHTS
+                    </h3>
+                    <p class="text">
+                      Holland Marine Lifts designs, builds, installs and
+                      maintains lifts, providing passenger, freight, service and
+                      specialist lifts for three important maritime industries -
+                      superyachts, offshore marine installations and navy
+                      vessels.
+                      <br />
+                      <br />
+                      As a family business, Holland Marine Lifts prides itself
+                      on its craftsmanship and attention to detail, and is
+                      well-known for its unique, creative lift solutions and
+                      unparalleled, high level of quality. All its designs
+                      conform to the international design rules and are tested
+                      by agencies such as ABS, BV, DNV GL, LRS and
+                      Liftinstituut.
+                    </p>
+                    <div href="/" class="navigation-button">Discover</div>
+                  </div>
+                </article>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <article class="supplier">
+                  <figure class="image-wrapper">
+                    <img src="./images/applications/hotel.jpg" alt="" />
+                    <figcaption class="heading">Supernatural-X Ltd</figcaption>
+                    <div class="gradient"></div>
+                  </figure>
+
+                  <div class="supplier-content">
+                    <h3 class="heading">
+                      INSTALLATION OF OUR CARBON FIBRE LIFTS FOR SUPERYACHTS
+                    </h3>
+                    <p class="text">
+                      Holland Marine Lifts designs, builds, installs and
+                      maintains lifts, providing passenger, freight, service and
+                      specialist lifts for three important maritime industries -
+                      superyachts, offshore marine installations and navy
+                      vessels.
+                      <br />
+                      <br />
+                      As a family business, Holland Marine Lifts prides itself
+                      on its craftsmanship and attention to detail, and is
+                      well-known for its unique, creative lift solutions and
+                      unparalleled, high level of quality. All its designs
+                      conform to the international design rules and are tested
+                      by agencies such as ABS, BV, DNV GL, LRS and
+                      Liftinstituut.
+                    </p>
+                    <div href="/" class="navigation-button">Discover</div>
+                  </div>
+                </article>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <footer>
+        <div class="footer-wrapper">
+          <div class="footer-wrapper__contacts">
+            <h6 class="heading">Contact Us</h6>
+            <ul class="contact-list">
+              <li class="member-info">
+                <p class="name">Alister Bennett</p>
+                <p class="title">CEO, Founder</p>
+                <a href="/" class="email">
+                  <span class="material-symbols-outlined"> mail </span>
+                  alister@opulentdesignsinternational.com
+                </a>
+                <a href="/" class="email">
+                  <span class="material-symbols-outlined"> call </span>
+                  +44 7986 239515
+                </a>
+              </li>
+
+              <li class="member-info">
+                <p class="name">Tom Wilton</p>
+                <p class="title">
+                  Business Development Director (UK and Middle East)
+                </p>
+                <a href="/" class="email">
+                  <span class="material-symbols-outlined"> mail </span>
+                  alister@opulentdesignsinternational.com
+                </a>
+                <a href="/" class="email">
+                  <span class="material-symbols-outlined"> call </span>
+                  +44 7986 239515
+                </a>
+              </li>
+
+              <li class="member-info">
+                <p class="name">Will Wilton</p>
+                <p class="title">
+                  Business Development Director (Marine and Automotive)
+                </p>
+                <a href="/" class="email">
+                  <span class="material-symbols-outlined"> mail </span>
+                  alister@opulentdesignsinternational.com
+                </a>
+                <a href="/" class="email">
+                  <span class="material-symbols-outlined"> call </span>
+                  +44 7986 239515
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-wrapper__links">
+            <h6 class="heading">Discover</h6>
+            <ul class="links-list">
+              <li class="link">
+                <a href="">Residential</a>
+              </li>
+              <li class="link">
+                <a href="">Marine</a>
+              </li>
+              <li class="link">
+                <a href="">Hospitality</a>
+              </li>
+              <li class="link">
+                <a href="">Automotive</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-wrapper__socials">
+            <h6 class="heading">Follow Us</h6>
+            <ul class="socials-list">
+              <li class="social">
+                <a href="/">Instagram</a>
+              </li>
+              <li class="social">
+                <a href="/">LinkedIn</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="company-copy">
+          <p class="opulent-copy">
+            Copyright 2022 Opulent Designs International Ltd
+          </p>
+          <a class="policy" href="">Terms & Conditions</a>
+          <p class="aztec-copy">
+            Designed by <a href="/">AztecMedia</a>, part of the
+            <a href="/">Yeomedia Group</a>
+          </p>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>

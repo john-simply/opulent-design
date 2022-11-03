@@ -18,9 +18,9 @@ $border-color: var(--clr-primary-gold);
     content: '';
     display: block;
     position: absolute;
-    width: 98%;
-    height: 91%;
-    border: 2px solid;
+    width: 97%;
+    height: 90%;
+    border: 3px solid;
     transition: all 0.6s ease;
   }
   &::after {

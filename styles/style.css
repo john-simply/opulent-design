@@ -303,9 +303,9 @@ body {
   content: "";
   display: block;
   position: absolute;
-  width: 98%;
-  height: 91%;
-  border: 2px solid;
+  width: 97%;
+  height: 90%;
+  border: 3px solid;
   transition: all 0.6s ease;
 }
 .navigation-button::after {
@@ -1296,6 +1296,7 @@ footer .company-copy .aztec-copy {
   font-size: 4rem;
   color: var(--clr-white);
   font-weight: bold;
+  text-align: center;
 }
 
 /*===ABOUT SECTION CONTENT=== */
@@ -1645,5 +1646,155 @@ footer .company-copy .aztec-copy {
 @media (min-width: 1024px) {
   .coming-soon__hero .heading {
     font-size: 5rem;
+  }
+}
+
+/*===SUPPLIERS LIST (SUPPLIERS PAGE)=== */
+.suppliers-list {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  background-color: var(--clr-white);
+}
+.suppliers-list__content {
+  text-align: center;
+}
+.suppliers-list__content .heading {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--clr-black);
+}
+.suppliers-list__list {
+  margin-top: 4rem;
+}
+.suppliers-list__list .supplier {
+  width: calc(100% - 4rem);
+  max-width: 400px;
+  margin-top: 2rem;
+  margin-inline: auto;
+  padding-bottom: 2rem;
+  color: var(--clr-black);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.2s ease-in-out;
+  box-shadow: rgba(0, 0, 0, 0.35) 0 0 0;
+}
+.suppliers-list__list .supplier .image-wrapper {
+  height: 250px;
+}
+.suppliers-list__list .supplier .image-wrapper img {
+  display: block;
+  transition: transform 0.2s ease-in;
+}
+.suppliers-list__list .supplier .image-wrapper .heading {
+  margin-top: 2rem;
+}
+.suppliers-list__list .supplier .supplier-content {
+  padding: 1rem;
+}
+.suppliers-list__list .supplier .supplier-content .heading {
+  margin-top: 5rem;
+  opacity: 0.8;
+  font-size: 1.6rem;
+}
+.suppliers-list__list .supplier .supplier-content .text {
+  line-height: 150%;
+  margin-top: 2rem;
+}
+.suppliers-list__list .supplier .supplier-content .navigation-button {
+  margin-top: 2rem;
+  letter-spacing: 0.1rem;
+}
+.suppliers-list__list .supplier:hover {
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
+}
+@media (min-width: 1024px) {
+  .suppliers-list__list {
+    margin-inline: auto;
+  }
+  .suppliers-list__list .supplier {
+    max-width: unset;
+    padding: unset;
+    box-shadow: unset;
+    border: unset;
+    display: flex;
+    justify-content: space-between;
+    max-width: 1440px;
+  }
+  .suppliers-list__list .supplier:hover {
+    box-shadow: unset;
+  }
+  .suppliers-list__list .supplier:hover .image-wrapper img {
+    transform: scale(1.1);
+  }
+  .suppliers-list__list .supplier .image-wrapper {
+    position: relative;
+    height: 500px;
+    overflow: hidden;
+    max-width: 500px;
+  }
+  .suppliers-list__list .supplier .image-wrapper .heading {
+    position: absolute;
+    bottom: 32px;
+    right: 32px;
+    color: var(--clr-white);
+    z-index: 2;
+  }
+  .suppliers-list__list .supplier .image-wrapper .gradient {
+    z-index: 1;
+  }
+  .suppliers-list__list .supplier .supplier-content {
+    text-align: left;
+    padding-left: 4rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 50%;
+  }
+  .suppliers-list__list .supplier .supplier-content .heading {
+    margin-top: 0;
+    font-size: 2rem;
+  }
+  .suppliers-list__list .supplier .supplier-content .text {
+    display: -webkit-box;
+    -webkit-line-clamp: 9;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .suppliers-list__list .supplier .supplier-content .navigation-button {
+    max-width: 200px;
+    text-align: center;
+  }
+}
+@media (min-width: 1440px) {
+  .suppliers-list {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+  .suppliers-list__content .heading {
+    font-size: 2rem;
+  }
+  .suppliers-list__list {
+    margin-top: 10rem;
+    margin-bottom: 5rem;
+  }
+  .suppliers-list__list li {
+    margin-top: 10rem;
+  }
+  .suppliers-list__list li:nth-child(even) {
+    margin-left: 15rem;
+  }
+  .suppliers-list__list li:nth-child(even) .supplier {
+    flex-direction: row-reverse;
+  }
+  .suppliers-list__list li:nth-child(even) .supplier .image-wrapper {
+    margin-right: 5rem;
+  }
+  .suppliers-list__list .supplier .supplier-content {
+    padding-left: 0;
+  }
+  .suppliers-list__list .supplier .supplier-content .text {
+    font-size: 1.3rem;
+  }
+  .suppliers-list__list .supplier .supplier-content .heading {
+    font-size: 2.5rem;
   }
 }/*# sourceMappingURL=style.css.map */
