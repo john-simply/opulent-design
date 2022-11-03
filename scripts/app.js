@@ -126,3 +126,97 @@ if (!!document.querySelector('.carbon__splide')) {
 
   carbonSplide.mount();
 }
+
+// needs reversing
+gsap.to('.main-header', {
+  backgroundColor: '#272727',
+  ease: 'ease',
+  scrollTrigger: {
+    trigger: 'html',
+    start: 'top+=100 top',
+    end: 'bottom bottom',
+    // scrub: true,
+  },
+});
+
+const imageContainer = document.querySelector('.mega-menu__image-wrapper');
+const megaImage = document.querySelector('.mega-menu__image');
+const crossFade = document.querySelector('.cross-fade-image');
+
+if (imageContainer) {
+  document.querySelector('.Residential').addEventListener('mouseover', () => {
+    imageContainer.href = '/projects/residential';
+
+    const currentSrc = megaImage.src;
+    crossFade.src = currentSrc;
+
+    megaImage.style.opacity = 0;
+    setTimeout(() => {
+      megaImage.src = './images/heros/residential.webp';
+      megaImage.style.opacity = 1;
+    }, 300);
+  });
+
+  document.querySelector('.Marine').addEventListener('mouseover', () => {
+    imageContainer.href = '/projects/marine';
+
+    const currentSrc = megaImage.src;
+    crossFade.src = currentSrc;
+
+    megaImage.style.opacity = 0;
+    setTimeout(() => {
+      megaImage.src = './images/heros/marine.webp';
+      megaImage.style.opacity = 1;
+    }, 300);
+  });
+
+  document.querySelector('.Hospitality').addEventListener('mouseover', () => {
+    imageContainer.href = '/projects/hospitality';
+
+    const currentSrc = megaImage.src;
+    crossFade.src = currentSrc;
+
+    megaImage.style.opacity = 0;
+    setTimeout(() => {
+      megaImage.src = './images/heros/hospitality.webp';
+      megaImage.style.opacity = 1;
+    }, 300);
+  });
+
+  document.querySelector('.Automotive').addEventListener('mouseover', () => {
+    imageContainer.href = '/projects/automotive';
+
+    const currentSrc = megaImage.src;
+    crossFade.src = currentSrc;
+
+    megaImage.style.opacity = 0;
+    setTimeout(() => {
+      megaImage.src = './images/heros/automotive.webp';
+      megaImage.style.opacity = 1;
+    }, 300);
+  });
+
+  document.querySelector('#projects-item').addEventListener('mouseover', () => {
+    const dropdown = document.querySelector('.mega-menu');
+
+    dropdown.classList.add('visible');
+    dropdown.style.opacity = 1;
+
+    dropdown.addEventListener('mouseleave', () => {
+      dropdown.style.opacity = 0;
+      setTimeout(() => {
+        dropdown.classList.remove('visible');
+      }, 100);
+    });
+
+    const items = document.querySelectorAll('.main-navigation__list li a');
+
+    items.forEach((item) => {
+      if (!item.id) {
+        item.addEventListener('mouseover', () => {
+          dropdown.classList.remove('visible');
+        });
+      }
+    });
+  });
+}

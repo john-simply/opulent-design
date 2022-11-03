@@ -182,7 +182,7 @@ img {
 /* ===COLORS=== */
 :root {
   --clr-white: #fff;
-  --clr-black: #182131;
+  --clr-black: #272727;
   --clr-primary-gold: #c6984c;
 }
 
@@ -574,7 +574,7 @@ body {
   display: flex;
   align-items: center;
   padding: 1rem 1.5rem;
-  position: absolute;
+  position: fixed;
   width: 100%;
   z-index: 50;
 }
@@ -663,6 +663,80 @@ body {
 }
 
 /*===MAIN MENU NAVIGATION=== */
+.mega-menu {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .mega-menu {
+    position: absolute;
+    top: 120px;
+    left: 0px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    background-color: #272727;
+    color: var(--clr-white);
+    width: 100%;
+    display: flex;
+    max-height: 410px;
+    z-index: 10;
+  }
+  .mega-menu .cross-fade-image {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+  }
+  .mega-menu__image-wrapper {
+    position: relative;
+    width: 70%;
+  }
+  .mega-menu__image-wrapper:hover .gradient {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+  .mega-menu__image-wrapper .gradient {
+    transition: background-color 0.4s ease;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  .mega-menu__image-wrapper img {
+    transition: opacity 0.3s ease;
+  }
+  .mega-menu__image-wrapper .navigation-button {
+    position: absolute;
+    z-index: 5;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1.5rem 3.5rem;
+    letter-spacing: 0.1rem;
+  }
+  .mega-menu__links {
+    width: 30%;
+  }
+  .mega-menu__links .link {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  .mega-menu__links .link a {
+    padding: 2.5rem;
+    text-align: center;
+    font-weight: bold;
+    display: block;
+    font-size: 1.3rem;
+    transition: background-color 0.2s ease-in-out;
+  }
+  .mega-menu__links .link a:hover {
+    background-color: #5f5d5d;
+  }
+  .mega-menu__links .link:last-child {
+    border-color: transparent;
+  }
+}
+
+.visible {
+  visibility: visible;
+}
+
 /*===HOMEPAGE LANDING SECTION=== */
 .main-content {
   text-align: center;
