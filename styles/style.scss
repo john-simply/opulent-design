@@ -115,6 +115,9 @@ body {
           margin-left: 1.5rem;
           .active {
             border-color: var(--clr-primary-gold);
+            &:hover {
+              border-color: var(--clr-primary-gold);
+            }
           }
 
           a {
@@ -141,7 +144,7 @@ body {
 
   @include desktop() {
     .company-logo {
-      width: 250px;
+      width: 300px;
     }
 
     .main-navigation {
@@ -155,6 +158,10 @@ body {
       }
     }
   }
+}
+
+/*===MAIN MENU NAVIGATION=== */
+.mega-menu {
 }
 
 /*===HOMEPAGE LANDING SECTION=== */
