@@ -5,6 +5,7 @@
 @import './vendors/hamburger';
 @import './vendors/navigation-button';
 @import './vendors/splide-core';
+@import './vendors/404';
 
 /*——————————————————————
 
@@ -260,6 +261,7 @@ body {
 
   @include laptop() {
     background-image: url('../images/black-carbon.jpg');
+    background-size: contain;
     height: calc(100vh + 12rem);
 
     .lift-wrapper {

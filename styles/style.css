@@ -481,6 +481,62 @@ body {
   z-index: 0;
 }
 
+.page__not__found {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  background-color: white;
+  height: 100vh;
+}
+
+.not__logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.not__logo img {
+  width: 30%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.not__logo p {
+  font-size: 10rem;
+}
+
+.details {
+  text-align: center;
+  width: 80%;
+  margin-top: 3rem;
+}
+.details p {
+  margin-bottom: 5rem;
+}
+.details p:first-child {
+  font-weight: bold;
+  font-size: 1.4rem;
+  color: var(--clr-primary-gold);
+  margin-bottom: 1rem;
+}
+.details p:last-child {
+  margin-top: 1rem;
+  font-weight: 1.2rem;
+}
+.details a {
+  padding: 1.5rem 2rem;
+}
+
+@media (min-width: 1024px) {
+  .page__not__found {
+    gap: 5rem;
+  }
+  .page__not__found img {
+    width: 30%;
+  }
+}
 /*——————————————————————
 
 [Table of contents]
@@ -684,6 +740,7 @@ body {
 @media (min-width: 1024px) {
   .main-content {
     background-image: url("../images/black-carbon.jpg");
+    background-size: contain;
     height: calc(100vh + 12rem);
   }
   .main-content .lift-wrapper {

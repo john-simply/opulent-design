@@ -1,0 +1,58 @@
+.page__not__found {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  color: black;
+  background-color: white;
+  height: 100vh;
+}
+
+.not__logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  gap: 2rem;
+  img {
+    width: 30%;
+    object-fit: contain;
+  }
+  p {
+    font-size: 10rem;
+  }
+}
+
+.details {
+  text-align: center;
+  width: 80%;
+  margin-top: 3rem;
+  p {
+    margin-bottom: 5rem;
+  }
+  p:first-child {
+    font-weight: bold;
+    font-size: 1.4rem;
+    color: var(--clr-primary-gold);
+    margin-bottom: 1rem;
+  }
+  p:last-child {
+    margin-top: 1rem;
+    font-weight: 1.2rem;
+  }
+
+  a {
+    padding: 1.5rem 2rem;
+  }
+}
+
+@include laptop() {
+  .page__not__found {
+    gap: 5rem;
+    img {
+      width: 30%;
+    }
+  }
+}
