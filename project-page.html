@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- gsap scripts -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"
+      integrity="sha384-GWpeQQCx59oy0AZxNeVcLrX+Nqpg3dhEoBT/ynclm8lAsrgtZfh/GqUAEuOG1gYA"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"
+      integrity="sha384-YERp0leS9gec08SXfRcJ7P+5G0R/bOBvRotlUTlI5Oxg2d/egqnOV3Sn4eDcCVjO"
+      crossorigin="anonymous"
+      defer
+    ></script>
+
+    <script src="./scripts/splide.min.js" defer></script>
+    <script src="./scripts/gsap-animations.js" defer></script>
+    <script src="./scripts/app.js" defer></script>
+
+    <link rel="stylesheet" href="./styles/style.css" />
+
+    <title>Boilerplate Project</title>
+  </head>
+  <body>
+    <header class="main-header">
+      <figure class="company-logo">
+        <a href="">
+          <img src="./images/logo.svg" alt="Opulent Design International" />
+        </a>
+      </figure>
+
+      <button class="hamburger__button" onclick="toggleMainNavigation()">
+        <span class="hamburger__input__bar"></span>
+        <span class="hamburger__input__bar"></span>
+        <span class="hamburger__input__bar"></span>
+      </button>
+
+      <nav class="main-navigation">
+        <ul class="main-navigation__list" aria-expanded="false">
+          <li>
+            <a class="active" href="/">Home</a>
+          </li>
+          <li>
+            <a href="/">About Us</a>
+          </li>
+          <li>
+            <a href="/">Projects</a>
+          </li>
+          <li>
+            <a href="/">News & Events</a>
+          </li>
+          <li>
+            <a href="/">Suppliers</a>
+          </li>
+          <li class="navigation-button">
+            <a href="/">Contact Us</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="project-hero">
+        <figure
+          style="--about-background: url('../images/heros/marine.webp')"
+          class="project-hero__background parallax"
+        >
+          <div class="gradient"></div>
+        </figure>
+        <div class="project-hero__content">
+          <div class="heading">Marine Sector</div>
+        </div>
+      </section>
+
+      <section class="projects-content-block">
+        <div class="projects-content-block__content">
+          <h2>Our solutions for the marine sector</h2>
+          <p>
+            A carbon fibre lift cabin can weigh as little as 15kgs. This means
+            it can easily be manoeuvred into position manually, with no need for
+            the heavy machinery required to install a steel lift.
+
+            <br />
+            <br />
+
+            This provides designers and shipbuilders with greater flexibility in
+            relation to the timing of its installation, whether as part of a new
+            build or refit.
+
+            <br />
+            <br />
+
+            Our carbon fibre lifts allow owners of superyachts to incorporate
+            the latest in innovation style by providing them with an exciting
+            and exclusive, individually designed luxury product.
+          </p>
+
+          <a href="/" class="navigation-button"> Contact Us </a>
+        </div>
+      </section>
+
+      <section class="application-block">
+        <div class="application-block__content">
+          <h2 class="heading">Versatile Application</h2>
+        </div>
+
+        <div class="application-block__applications">
+          <ul class="application-list">
+            <li>
+              <a href="/" class="app-block">
+                <figure class="image-wrapper">
+                  <span class="gradient"></span>
+                  <img src="./images/applications/hotel.jpg" alt="" />
+                  <figcaption class="image-heading">Residential</figcaption>
+                </figure>
+              </a>
+            </li>
+            <li>
+              <a href="/" class="app-block">
+                <figure class="image-wrapper">
+                  <span class="gradient"></span>
+                  <img src="./images/applications/marine.jpg" alt="" />
+                  <figcaption class="image-heading">Residential</figcaption>
+                </figure>
+              </a>
+            </li>
+            <li>
+              <a href="/" class="app-block">
+                <figure class="image-wrapper">
+                  <span class="gradient"></span>
+                  <img src="./images/applications/residential.jpg" alt="" />
+                  <figcaption class="image-heading">Residential</figcaption>
+                </figure>
+              </a>
+            </li>
+            <li>
+              <a href="/" class="app-block">
+                <figure class="image-wrapper">
+                  <span class="gradient"></span>
+                  <img src="./images/applications/automotive.jpg" alt="" />
+                  <figcaption class="image-heading">Residential</figcaption>
+                </figure>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="carbon-lift-slider">
+        <div class="carbon__splide">
+          <div class="splide__arrows">
+            <button
+              class="splide__arrow splide__arrow--prev"
+              onclick="changeLift(false)"
+            >
+              <span class="material-icons-outlined">chevron_left</span>
+            </button>
+            <button
+              class="splide__arrow splide__arrow--next"
+              onclick="changeLift(true)"
+            >
+              <span class="material-icons-outlined">chevron_right</span>
+            </button>
+          </div>
+
+          <div class="splide__track">
+            <ul class="splide__list">
+              <li class="splide__slide">
+                <img src="./images/lifts/product-image-1.png" alt="" />
+              </li>
+              <li class="splide__slide">
+                <img src="./images/lifts/product-image-2.png" alt="" />
+              </li>
+              <li class="splide__slide">
+                <img src="./images/lifts/product-image-3.png" alt="" />
+              </li>
+              <li class="splide__slide">
+                <img src="./images/lifts/product-image-4.png" alt="" />
+              </li>
+              <li class="splide__slide">
+                <img src="./images/lifts/product-image-5.png" alt="" />
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <h4 id="lift-label" class="lift-label">Ocean Blue</h4>
+      </section>
+
+      <footer>
+        <div class="footer-wrapper">
+          <div class="footer-wrapper__contacts">
+            <h6 class="heading">Contact Us</h6>
+            <ul class="contact-list">
+              <li class="member-info">
+                <p class="name">Alister Bennett</p>
+                <p class="title">CEO, Founder</p>
+                <a href="/" class="email">
+                  <span class="material-symbols-outlined"> mail </span>
+                  alister@opulentdesignsinternational.com
+                </a>
+                <a href="/" class="email">
+                  <span class="material-symbols-outlined"> call </span>
+                  +44 7986 239515
+                </a>
+              </li>
+
+              <li class="member-info">
+                <p class="name">Tom Wilton</p>
+                <p class="title">
+                  Business Development Director (UK and Middle East)
+                </p>
+                <a href="/" class="email">
+                  <span class="material-symbols-outlined"> mail </span>
+                  alister@opulentdesignsinternational.com
+                </a>
+                <a href="/" class="email">
+                  <span class="material-symbols-outlined"> call </span>
+                  +44 7986 239515
+                </a>
+              </li>
+
+              <li class="member-info">
+                <p class="name">Will Wilton</p>
+                <p class="title">
+                  Business Development Director (Marine and Automotive)
+                </p>
+                <a href="/" class="email">
+                  <span class="material-symbols-outlined"> mail </span>
+                  alister@opulentdesignsinternational.com
+                </a>
+                <a href="/" class="email">
+                  <span class="material-symbols-outlined"> call </span>
+                  +44 7986 239515
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-wrapper__links">
+            <h6 class="heading">Discover</h6>
+            <ul class="links-list">
+              <li class="link">
+                <a href="">Residential</a>
+              </li>
+              <li class="link">
+                <a href="">Marine</a>
+              </li>
+              <li class="link">
+                <a href="">Hospitality</a>
+              </li>
+              <li class="link">
+                <a href="">Automotive</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-wrapper__socials">
+            <h6 class="heading">Follow Us</h6>
+            <ul class="socials-list">
+              <li class="social">
+                <a href="/">Instagram</a>
+              </li>
+              <li class="social">
+                <a href="/">LinkedIn</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="company-copy">
+          <p class="opulent-copy">
+            Copyright 2022 Opulent Designs International Ltd
+          </p>
+          <a class="policy" href="">Terms & Conditions</a>
+          <p class="aztec-copy">
+            Designed by <a href="/">AztecMedia</a>, part of the
+            <a href="/">Yeomedia Group</a>
+          </p>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>
