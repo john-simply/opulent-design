@@ -1441,5 +1441,38 @@ footer {
 
   @include laptop() {
     font-size: 1.3rem;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+}
+
+/*===PROJECTS COMING SOON (CHANGE TO PRODUCTS ONCE POPULATED)=== */
+.coming-soon {
+  &__hero {
+    position: relative;
+    z-index: -1;
+
+    background-image: url('../images/heros/marine.webp');
+    height: 50vh;
+
+    display: grid;
+    place-items: center;
+
+    text-align: center;
+
+    .heading {
+      font-size: 3rem;
+      font-weight: bold;
+      color: var(--clr-white);
+      z-index: 5;
+    }
+  }
+
+  @include laptop() {
+    &__hero {
+      .heading {
+        font-size: 5rem;
+      }
+    }
   }
 }

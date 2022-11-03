@@ -1621,5 +1621,29 @@ footer .company-copy .aztec-copy {
 @media (min-width: 1024px) {
   .projects-content-block {
     font-size: 1.3rem;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+}
+
+/*===PROJECTS COMING SOON (CHANGE TO PRODUCTS ONCE POPULATED)=== */
+.coming-soon__hero {
+  position: relative;
+  z-index: -1;
+  background-image: url("../images/heros/marine.webp");
+  height: 50vh;
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+.coming-soon__hero .heading {
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--clr-white);
+  z-index: 5;
+}
+@media (min-width: 1024px) {
+  .coming-soon__hero .heading {
+    font-size: 5rem;
   }
 }/*# sourceMappingURL=style.css.map */
