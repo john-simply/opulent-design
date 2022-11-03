@@ -889,6 +889,9 @@ body {
   background-size: cover;
   width: 100%;
 }
+.application-block__content {
+  text-align: center;
+}
 .application-block__content .heading {
   color: var(--clr-black);
   font-size: 3rem;
@@ -898,6 +901,7 @@ body {
   max-width: 500px;
   margin-inline: auto;
   margin-top: 3rem;
+  color: var(--clr-white);
 }
 .application-block__applications .application-list {
   display: flex;
@@ -1004,6 +1008,7 @@ body {
   padding-top: 3rem;
   padding-bottom: 5rem;
   background-image: url("../images/black-carbon.jpg");
+  color: var(--clr-white);
   width: 100%;
 }
 .carbon-lift-slider .carbon__lifts {
@@ -1270,9 +1275,6 @@ footer .company-copy .aztec-copy {
   left: 0px;
   z-index: -1;
 }
-.landing-hero__background img {
-  display: block;
-}
 .landing-hero__content {
   display: grid;
   place-items: center;
@@ -1390,5 +1392,141 @@ footer .company-copy .aztec-copy {
   }
   .about-section__content .text {
     line-height: 180%;
+  }
+}
+
+/*===PROJECTS PAGE STYLES=== */
+.project-hero {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--clr-white);
+}
+.project-hero__background {
+  background-image: var(--about-background);
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: -1;
+}
+.project-hero__content {
+  text-align: center;
+}
+.project-hero__content .heading {
+  font-size: 4rem;
+  color: var(--clr-white);
+  font-weight: bold;
+}
+
+.advantages-block {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  background-color: var(--clr-white);
+}
+.advantages-block__content {
+  width: calc(100% - 4rem);
+  margin-inline: auto;
+}
+.advantages-block__content .heading {
+  font-weight: bold;
+  font-size: 1.6rem;
+}
+.advantages-block__content .sub-heading {
+  margin-top: 0.5rem;
+  opacity: 0.8;
+  font-weight: bold;
+}
+.advantages-block__content .advantages {
+  margin-top: 1rem;
+}
+.advantages-block__content .advantages::before {
+  content: "";
+  display: block;
+  width: 200px;
+  background-color: var(--clr-primary-gold);
+  height: 2px;
+  opacity: 0.3;
+}
+.advantages-block__content .advantages .advantage {
+  margin-top: 1.5rem;
+  text-align: left;
+  display: flex;
+  align-items: flex-start;
+}
+.advantages-block__content .advantages .advantage .number {
+  font-size: 1rem;
+  color: var(--clr-primary-gold);
+  margin-right: 0.5rem;
+  opacity: 0.8;
+  margin-top: 0.3rem;
+}
+.advantages-block__content .advantages .advantage .text {
+  position: relative;
+  display: flex;
+  align-items: center;
+  line-height: 150%;
+}
+@media (min-width: 1024px) {
+  .advantages-block__content {
+    text-align: center;
+  }
+  .advantages-block__content .heading {
+    font-size: 2.6rem;
+    max-width: 500px;
+    margin-inline: auto;
+  }
+  .advantages-block__content .sub-heading {
+    font-size: 1.2rem;
+  }
+  .advantages-block__content .advantages {
+    max-width: 1440px;
+    margin-inline: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: calc(100% - 4rem);
+  }
+  .advantages-block__content .advantages::before {
+    display: none;
+  }
+  .advantages-block__content .advantages .advantage {
+    text-align: left;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 3rem;
+  }
+  .advantages-block__content .advantages .advantage .number {
+    margin-top: 0;
+    font-size: 1.4rem;
+    border-radius: 100%;
+    margin-bottom: 1rem;
+    background-color: var(--clr-primary-gold);
+    color: var(--clr-white);
+    opacity: 0.5;
+    width: 32px;
+    height: 32px;
+    display: grid;
+    place-items: center;
+  }
+  .advantages-block__content .advantages .advantage .text {
+    max-width: 320px;
+    text-align: center;
+  }
+}
+@media (min-width: 1440px) {
+  .advantages-block__content .advantages {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .advantages-block__content .advantages .advantage {
+    font-size: 1.4rem;
+  }
+  .advantages-block__content .advantages .advantage .number {
+    margin-right: 1rem;
+    font-size: 2rem;
+    height: 64px;
+    width: 64px;
   }
 }/*# sourceMappingURL=style.css.map */

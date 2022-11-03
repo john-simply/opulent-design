@@ -66,75 +66,142 @@
     </header>
 
     <main>
-      <section class="landing-hero">
+      <section class="project-hero">
         <figure
-          style="--about-background: url('../images/heros/about-us.jpg')"
-          class="landing-hero__background parallax"
+          style="--about-background: url('../images/heros/projects.png')"
+          class="project-hero__background parallax"
         >
           <div class="gradient"></div>
         </figure>
-        <div class="landing-hero__content">
-          <h1 class="heading">About Us</h1>
+        <div class="project-hero__content">
+          <div class="heading">Our Projects</div>
         </div>
       </section>
 
-      <section class="about-section">
-        <div class="about-section__wrapper">
-          <div class="about-section__content">
-            <h2 class="heading">
-              Who we are, what we do and why our carbon lifts define excellence.
-            </h2>
-            <p class="text">
-              Opulent Designs is the only company providing bespoke carbon fibre
-              lift cabins and shafts, delivering an exciting and innovative
-              product to the ultra-luxury residential and superyacht sectors. We
-              will deliver an exclusive product to each client, sculpting our
-              lift cabins to reflect their vision through bespoke selection of
-              the colour, weave pattern and design of the carbon fibre, and
-              exclusive and opulent floor, ceiling and handrail finishes.
-            </p>
-            <p class="text">
-              <strong>
-                The result is a moving piece of art, a collector's item.
-              </strong>
-              Opulent Design' carbon fibre lift cabins and shafts are built for
-              the company in the UK by carbon fibre designer and manufacturer
-              Supernatural-X Ltd.
-            </p>
+      <section class="advantages-block">
+        <div class="advantages-block__content">
+          <h1 class="heading">
+            Introducing carbon fibre lift cabins and shafts
+          </h1>
+          <p class="sub-heading">Advantages of carbon fibre over steel:</p>
+          <ul class="advantages">
+            <li class="advantage">
+              <span class="number">1</span>
+              <p class="text">Carbon fibre is up to 5 times stronger</p>
+            </li>
+            <li class="advantage">
+              <span class="number">2</span>
+              <p class="text">Carbon fibre is up to 20 times lighter</p>
+            </li>
+            <li class="advantage">
+              <span class="number">3</span>
+              <p class="text">Ideal for saltwater environments</p>
+            </li>
+            <li class="advantage">
+              <span class="number">4</span>
+              <p class="text">Carbon fibre is up to 5 times stronger</p>
+            </li>
+            <li class="advantage">
+              <span class="number">5</span>
+              <p class="text">Ideal for saltwater environments</p>
+            </li>
+            <li class="advantage">
+              <span class="number">6</span>
+              <p class="text">
+                Light weight means smaller power units and cylinders, more
+                energy-efficient
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="application-block">
+        <div class="application-block__content">
+          <h2 class="heading">Versatile Application</h2>
+        </div>
+
+        <div class="application-block__applications">
+          <ul class="application-list">
+            <li>
+              <a href="/" class="app-block">
+                <figure class="image-wrapper">
+                  <span class="gradient"></span>
+                  <img src="./images/applications/hotel.jpg" alt="" />
+                  <figcaption class="image-heading">Residential</figcaption>
+                </figure>
+              </a>
+            </li>
+            <li>
+              <a href="/" class="app-block">
+                <figure class="image-wrapper">
+                  <span class="gradient"></span>
+                  <img src="./images/applications/marine.jpg" alt="" />
+                  <figcaption class="image-heading">Residential</figcaption>
+                </figure>
+              </a>
+            </li>
+            <li>
+              <a href="/" class="app-block">
+                <figure class="image-wrapper">
+                  <span class="gradient"></span>
+                  <img src="./images/applications/residential.jpg" alt="" />
+                  <figcaption class="image-heading">Residential</figcaption>
+                </figure>
+              </a>
+            </li>
+            <li>
+              <a href="/" class="app-block">
+                <figure class="image-wrapper">
+                  <span class="gradient"></span>
+                  <img src="./images/applications/automotive.jpg" alt="" />
+                  <figcaption class="image-heading">Residential</figcaption>
+                </figure>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="carbon-lift-slider">
+        <div class="carbon__splide">
+          <div class="splide__arrows">
+            <button
+              class="splide__arrow splide__arrow--prev"
+              onclick="changeLift(false)"
+            >
+              <span class="material-icons-outlined">chevron_left</span>
+            </button>
+            <button
+              class="splide__arrow splide__arrow--next"
+              onclick="changeLift(true)"
+            >
+              <span class="material-icons-outlined">chevron_right</span>
+            </button>
           </div>
 
-          <div class="image-block-wrapper">
-            <div class="about-section__image-block">
-              <figure class="image-wrapper">
-                <img src="./images/yacht-2.jpg" alt="" />
-              </figure>
-
-              <p class="text">
-                <strong>Totally bespoke lift cabins</strong>
-                Lift cabins are totally bespoke - individually designed to offer
-                clients a truly opulent and unique product. Cabins are based on
-                Halo, Opulent Designs' revolutionary design where 2 concentric
-                carbon fibre rings are connected by a single carbon fibre column
-                at the back of the cabin.
-              </p>
-            </div>
-
-            <div class="about-section__image-block">
-              <p class="text">
-                <strong>Fibre solutions for niche automotive designers</strong>
-                Opulent Designs also offers carbon fibre solutions to niche
-                automotive designer / manufacturers specialising in the revival
-                of classic motors, where the material's light weight offers
-                significant advantages in the reinvention of these classics as
-                electric vehicles.
-              </p>
-
-              <figure class="image-wrapper">
-                <img src="./images/yacht-1.jpg" alt="" />
-              </figure>
-            </div>
+          <div class="splide__track">
+            <ul class="splide__list">
+              <li class="splide__slide">
+                <img src="./images/lifts/product-image-1.png" alt="" />
+              </li>
+              <li class="splide__slide">
+                <img src="./images/lifts/product-image-2.png" alt="" />
+              </li>
+              <li class="splide__slide">
+                <img src="./images/lifts/product-image-3.png" alt="" />
+              </li>
+              <li class="splide__slide">
+                <img src="./images/lifts/product-image-4.png" alt="" />
+              </li>
+              <li class="splide__slide">
+                <img src="./images/lifts/product-image-5.png" alt="" />
+              </li>
+            </ul>
           </div>
         </div>
+
+        <h4 id="lift-label" class="lift-label">Ocean Blue</h4>
       </section>
 
       <footer>
