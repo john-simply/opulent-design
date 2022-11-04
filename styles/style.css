@@ -1708,14 +1708,18 @@ body {
   font-weight: bold;
 }
 
-html {
-  scroll-behavior: smooth;
-}
+/*——————————————————————
 
+[Table of contents]
+
+1.
+
+——————————————————————-*/
 html,
 body {
   width: 100%;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -1742,7 +1746,7 @@ body {
   display: flex;
   align-items: center;
   padding: 1rem 1.5rem;
-  position: fixed;
+  position: absolute;
   width: 100%;
   z-index: 50;
 }
@@ -3017,6 +3021,15 @@ footer .company-copy .aztec-copy {
   .suppliers-list__list {
     margin-inline: auto;
   }
+  .suppliers-list__list li {
+    margin-top: 5rem;
+  }
+  .suppliers-list__list li:nth-child(even) .supplier {
+    flex-direction: row-reverse;
+  }
+  .suppliers-list__list li:nth-child(even) .supplier .supplier-content {
+    padding-left: 0;
+  }
   .suppliers-list__list .supplier {
     max-width: unset;
     padding: unset;
@@ -3077,7 +3090,7 @@ footer .company-copy .aztec-copy {
     padding-bottom: 8rem;
   }
   .suppliers-list__content .heading {
-    font-size: 2rem;
+    font-size: 3rem;
   }
   .suppliers-list__list {
     margin-top: 10rem;

@@ -12,14 +12,19 @@
 // SASS THAT NEEDS UPDATING
 @import './vendors/news-events';
 
-html {
-  scroll-behavior: smooth;
-}
+/*——————————————————————
+
+[Table of contents]
+
+1.
+
+——————————————————————-*/
 
 html,
 body {
   width: 100%;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -52,7 +57,7 @@ body {
 
   padding: 1rem 1.5rem;
 
-  position: fixed;
+  position: absolute;
   width: 100%;
 
   z-index: 50;
@@ -1648,6 +1653,18 @@ footer {
     &__list {
       margin-inline: auto;
 
+      li {
+        margin-top: 5rem;
+        &:nth-child(even) {
+          .supplier {
+            flex-direction: row-reverse;
+            .supplier-content {
+              padding-left: 0;
+            }
+          }
+        }
+      }
+
       .supplier {
         max-width: unset;
         padding: unset;
@@ -1720,7 +1737,7 @@ footer {
 
     &__content {
       .heading {
-        font-size: 2rem;
+        font-size: 3rem;
       }
     }
 
