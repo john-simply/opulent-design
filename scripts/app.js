@@ -160,7 +160,7 @@ const crossFade = document.querySelector('.cross-fade-image');
 
 if (imageContainer) {
   document.querySelector('.Residential').addEventListener('mouseover', () => {
-    imageContainer.href = '/projects/residential';
+    imageContainer.href = '/residential';
 
     const currentSrc = megaImage.src;
     crossFade.src = currentSrc;
@@ -173,7 +173,7 @@ if (imageContainer) {
   });
 
   document.querySelector('.Marine').addEventListener('mouseover', () => {
-    imageContainer.href = '/projects/marine';
+    imageContainer.href = '/marine';
 
     const currentSrc = megaImage.src;
     crossFade.src = currentSrc;
@@ -186,7 +186,7 @@ if (imageContainer) {
   });
 
   document.querySelector('.Hospitality').addEventListener('mouseover', () => {
-    imageContainer.href = '/projects/hospitality';
+    imageContainer.href = '/hospitality';
 
     const currentSrc = megaImage.src;
     crossFade.src = currentSrc;
@@ -199,7 +199,7 @@ if (imageContainer) {
   });
 
   document.querySelector('.Automotive').addEventListener('mouseover', () => {
-    imageContainer.href = '/projects/automotive';
+    imageContainer.href = '/automotive';
 
     const currentSrc = megaImage.src;
     crossFade.src = currentSrc;
