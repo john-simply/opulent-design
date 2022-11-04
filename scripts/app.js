@@ -235,3 +235,28 @@ if (imageContainer) {
     });
   });
 }
+
+// SPLIDE FEATURE BLOCK - NEEDS UPDATING
+if (!!document.querySelector('.main__feature__block__splide')) {
+  new Splide('.main__feature__block__splide', {
+    perPage: 1,
+    arrows: true,
+    type: 'fade',
+    pagination: false,
+  }).mount();
+}
+
+function toggleSuppliers() {
+  const element = document.querySelector('.homepage-suppliers-splide');
+
+  element.classList.toggle('transform-hidden');
+}
+
+if (!!document.querySelector('.homepage-suppliers-splide')) {
+  new Splide('.homepage-suppliers-splide', {
+    perPage: 1,
+    arrows: true,
+    type: 'fade',
+    pagination: false,
+  }).mount();
+}

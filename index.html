@@ -147,8 +147,85 @@
               clients, designers and architects, we create lift cabins that are
               unique and luxurious, in complete harmony with their surroundings.
             </p>
-            <a class="navigation-button"> View Suppliers </a>
+            <button onclick="toggleSuppliers()" class="navigation-button">
+              View Suppliers
+            </button>
           </div>
+        </div>
+      </section>
+
+      <section class="homepage-suppliers-splide transform-hidden">
+        <span class="fade-background"></span>
+        <div class="splide__arrows">
+          <button class="splide__arrow splide__arrow--prev">
+            <span class="material-icons-outlined">chevron_left</span>
+          </button>
+          <button class="splide__arrow splide__arrow--next">
+            <span class="material-icons-outlined">chevron_right</span>
+          </button>
+        </div>
+
+        <div class="splide__track">
+          <ul class="splide__list">
+            <li class="splide__slide suppliers-slide">
+              <figure class="image-wrapper">
+                <img src="./images/heros/about-us.jpg" alt="" />
+                <span class="gradient"></span>
+              </figure>
+
+              <div class="homepage-suppliers-content">
+                <button class="back-button" onclick="toggleSuppliers()">
+                  <svg
+                    fill="#C09958"
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="48"
+                    width="48"
+                  >
+                    <path
+                      d="m35.05 31.2-.8-.8 5.8-5.85H7.3v-1.1h32.8l-5.85-5.8.75-.8L42.2 24Z"
+                    />
+                  </svg>
+                  Back
+                </button>
+                <p class="heading">Acrylic Couture</p>
+                <p class="description">
+                  Using the finest acrylic glass and exclusive material inlays
+                  and meshes to create radiant pieces of art - glass, but in a
+                  completely new light.
+                </p>
+                <a href="" class="navigation-button">View Supplier</a>
+              </div>
+            </li>
+            <li class="splide__slide suppliers-slide">
+              <figure class="image-wrapper">
+                <img src="./images/heros/about-us.jpg" alt="" />
+                <span class="gradient"></span>
+              </figure>
+
+              <div class="homepage-suppliers-content">
+                <button class="back-button" onclick="toggleSuppliers()">
+                  <svg
+                    fill="#C09958"
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="48"
+                    width="48"
+                  >
+                    <path
+                      d="m35.05 31.2-.8-.8 5.8-5.85H7.3v-1.1h32.8l-5.85-5.8.75-.8L42.2 24Z"
+                    />
+                  </svg>
+                  Back
+                </button>
+                <p class="heading">Acrylic Couture</p>
+                <p class="description">
+                  Using the finest acrylic glass and exclusive material inlays
+                  and meshes to create radiant pieces of art - glass, but in a
+                  completely new light.
+                </p>
+                <a href="" class="navigation-button">View Supplier</a>
+              </div>
+            </li>
+          </ul>
         </div>
       </section>
 
