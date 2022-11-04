@@ -78,6 +78,177 @@
         </div>
       </section>
 
+      <section id="applications__layout" class="homepage__grid news__grid">
+        <h2 id="latest__news__title" class="heading">Latest News & Events</h2>
+
+        <div class="filter__container">
+          <button class="navigation-button" onclick="filter('all')">All</button>
+          <button
+            style="opacity: 0.5"
+            class="navigation-button"
+            onclick="filter('Event')"
+          >
+            Events
+          </button>
+          <button
+            style="opacity: 0.5"
+            class="navigation-button"
+            onclick="filter('News')"
+          >
+            News
+          </button>
+        </div>
+
+        <div class="applications__decoration">
+          <span class="line"></span>
+          <span class="line"></span>
+        </div>
+
+        <div class="grid__wrapper">
+          <article
+            class="application__item {$item->type} {if $item->position > 2}hidden {else} '' {/if}"
+          >
+            <a href="{$item->custom_url}" target="_blank">
+              <figure>
+                <span class="application__gradient"></span>
+                <img src="./images/applications/hotel.jpg" alt="" />
+                <figcaption>
+                  <span class="indicator"></span>
+                  <h3 class="application__heading">{$item->title}</h3>
+                  <p class="event__date">
+                    <span class="material-symbols-outlined"> event </span>
+                    {$item->date}
+                    <span class="material-symbols-outlined event__type">
+                      event
+                    </span>
+                    {$item->type}
+                  </p>
+                </figcaption>
+              </figure>
+            </a>
+          </article>
+          <article
+            class="application__item {$item->type} {if $item->position > 2}hidden {else} '' {/if}"
+          >
+            <a href="{$item->custom_url}" target="_blank">
+              <figure>
+                <span class="application__gradient"></span>
+                <img src="./images/applications/hotel.jpg" alt="" />
+                <figcaption>
+                  <span class="indicator"></span>
+                  <h3 class="application__heading">{$item->title}</h3>
+                  <p class="event__date">
+                    <span class="material-symbols-outlined"> event </span>
+                    {$item->date}
+                    <span class="material-symbols-outlined event__type">
+                      event
+                    </span>
+                    {$item->type}
+                  </p>
+                </figcaption>
+              </figure>
+            </a>
+          </article>
+          <article
+            class="application__item Event {$item->type} {if $item->position > 2}hidden {else} '' {/if}"
+          >
+            <a href="{$item->custom_url}" target="_blank">
+              <figure>
+                <span class="application__gradient"></span>
+                <img src="./images/applications/hotel.jpg" alt="" />
+                <figcaption>
+                  <span class="indicator"></span>
+                  <h3 class="application__heading">{$item->title}</h3>
+                  <p class="event__date">
+                    <span class="material-symbols-outlined"> event </span>
+                    {$item->date}
+                    <span class="material-symbols-outlined event__type">
+                      event
+                    </span>
+                    {$item->type}
+                  </p>
+                </figcaption>
+              </figure>
+            </a>
+          </article>
+          <article
+            class="application__item Event {$item->type} {if $item->position > 2}hidden {else} '' {/if}"
+          >
+            <a href="{$item->custom_url}" target="_blank">
+              <figure>
+                <span class="application__gradient"></span>
+                <img src="./images/applications/hotel.jpg" alt="" />
+                <figcaption>
+                  <span class="indicator"></span>
+                  <h3 class="application__heading">{$item->title}</h3>
+                  <p class="event__date">
+                    <span class="material-symbols-outlined"> event </span>
+                    {$item->date}
+                    <span class="material-symbols-outlined event__type">
+                      event
+                    </span>
+                    {$item->type}
+                  </p>
+                </figcaption>
+              </figure>
+            </a>
+          </article>
+          <article
+            class="application__item News hidden {$item->type} {if $item->position > 2}hidden {else} '' {/if}"
+          >
+            <a href="{$item->custom_url}" target="_blank">
+              <figure>
+                <span class="application__gradient"></span>
+                <img src="./images/applications/hotel.jpg" alt="" />
+                <figcaption>
+                  <span class="indicator"></span>
+                  <h3 class="application__heading">{$item->title}</h3>
+                  <p class="event__date">
+                    <span class="material-symbols-outlined"> event </span>
+                    {$item->date}
+                    <span class="material-symbols-outlined event__type">
+                      event
+                    </span>
+                    {$item->type}
+                  </p>
+                </figcaption>
+              </figure>
+            </a>
+          </article>
+          <article
+            class="application__item {$item->type} {if $item->position > 2}hidden {else} '' {/if}"
+          >
+            <a href="{$item->custom_url}" target="_blank">
+              <figure>
+                <span class="application__gradient"></span>
+                <img src="./images/applications/hotel.jpg" alt="" />
+                <figcaption>
+                  <span class="indicator"></span>
+                  <h3 class="application__heading">{$item->title}</h3>
+                  <p class="event__date">
+                    <span class="material-symbols-outlined"> event </span>
+                    {$item->date}
+                    <span class="material-symbols-outlined event__type">
+                      event
+                    </span>
+                    {$item->type}
+                  </p>
+                </figcaption>
+              </figure>
+            </a>
+          </article>
+        </div>
+        <div class="load__more">
+          <button
+            id="load__more"
+            class="navigation-button"
+            onclick="loadMore('all')"
+          >
+            Load More
+          </button>
+        </div>
+      </section>
+
       <footer>
         <div class="footer-wrapper">
           <div class="footer-wrapper__contacts">

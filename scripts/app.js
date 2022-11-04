@@ -260,3 +260,61 @@ if (!!document.querySelector('.homepage-suppliers-splide')) {
     pagination: false,
   }).mount();
 }
+
+// REMOVE AND REPLACE
+const filter = (filter) => {
+  const title = document.querySelector('#latest__news__title');
+  document.querySelector('#load__more').classList.remove('hidden');
+
+  switch (filter) {
+    case 'Event':
+      title.textContent = 'Latest Events';
+      break;
+    case 'News':
+      title.textContent = 'Latest News';
+      break;
+    default:
+      title.textContent = 'Latest News & Events';
+      break;
+  }
+
+  const loadMore = document.querySelector('#load__more');
+  loadMore.style.display = 'none';
+
+  const allEvents = document.querySelectorAll('.application__item');
+
+  for (let i = 0; i < allEvents.length; i++) {
+    const item = allEvents[i];
+
+    if (!item.classList.contains(filter)) {
+      item.classList.add('hidden');
+    } else {
+      item.classList.remove('hidden');
+    }
+
+    if (filter === 'all' && i < 2) {
+      loadMore.style.display = 'block';
+      item.classList.remove('hidden');
+    }
+  }
+};
+
+const loadMore = (filter) => {
+  const allEvents = document.querySelectorAll('.application__item.hidden');
+
+  if (allEvents.length <= 1) {
+    document.querySelector('#load__more').style.display = 'none';
+  }
+
+  for (let i = 0; i < allEvents.length; i++) {
+    const item = allEvents[i];
+
+    if (item.classList.contains('hidden')) {
+      item.classList.remove('hidden');
+    }
+
+    if (i > 0) {
+      break;
+    }
+  }
+};
