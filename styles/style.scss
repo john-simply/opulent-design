@@ -12,13 +12,10 @@
 // SASS THAT NEEDS UPDATING
 @import './vendors/news-events';
 
-/*——————————————————————
+html {
+  scroll-behavior: smooth;
+}
 
-[Table of contents]
-
-1.
-
-——————————————————————-*/
 html,
 body {
   width: 100%;
@@ -1553,7 +1550,8 @@ footer {
     position: relative;
     z-index: -1;
 
-    background-image: url('../images/heros/marine.webp');
+    background-image: var(--about-background);
+
     height: 50vh;
 
     display: grid;
@@ -1933,6 +1931,7 @@ footer {
   }
 }
 
+/*===CONTACT FORM (HOMEPAGE)=== */
 .contact-form {
   width: 100%;
 
@@ -2016,6 +2015,49 @@ footer {
         padding: 1.5rem 2rem;
         margin-right: 0;
       }
+    }
+  }
+}
+
+/*===TERMS AND CONDITIONS PAGE=== */
+.terms-and-conditions {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  background-color: var(--clr-white);
+
+  &__content {
+    width: calc(100% - 4rem);
+    margin-inline: auto;
+    max-width: 1000px;
+    p {
+      font-size: 1.1rem;
+      line-height: 150%;
+      opacity: 0.8;
+    }
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-size: 1.8rem;
+      color: var(--clr-black);
+      opacity: 0.8;
+      margin-bottom: 2rem;
+      margin-top: 2rem;
+      line-height: 2rem;
+      font-weight: bold;
+    }
+
+    strong {
+      font-weight: bold;
+    }
+  }
+
+  @include laptop() {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+    p {
+      font-size: 1.2rem;
     }
   }
 }

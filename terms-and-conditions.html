@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- gsap scripts -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"
+      integrity="sha384-GWpeQQCx59oy0AZxNeVcLrX+Nqpg3dhEoBT/ynclm8lAsrgtZfh/GqUAEuOG1gYA"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"
+      integrity="sha384-YERp0leS9gec08SXfRcJ7P+5G0R/bOBvRotlUTlI5Oxg2d/egqnOV3Sn4eDcCVjO"
+      crossorigin="anonymous"
+      defer
+    ></script>
+
+    <script src="./scripts/splide.min.js" defer></script>
+    <script src="./scripts/gsap-animations.js" defer></script>
+    <script src="./scripts/app.js" defer></script>
+
+    <link rel="stylesheet" href="./styles/style.css" />
+
+    <title>Boilerplate Project</title>
+  </head>
+  <body>
+    <header class="main-header">
+      <figure class="company-logo">
+        <a href="">
+          <img src="./images/logo.svg" alt="Opulent Design International" />
+        </a>
+      </figure>
+
+      <button class="hamburger__button" onclick="toggleMainNavigation()">
+        <span class="hamburger__input__bar"></span>
+        <span class="hamburger__input__bar"></span>
+        <span class="hamburger__input__bar"></span>
+      </button>
+
+      <nav class="main-navigation">
+        <ul class="main-navigation__list" aria-expanded="false">
+          <li>
+            <a class="active" href="/">Home</a>
+          </li>
+          <li>
+            <a href="/">About Us</a>
+          </li>
+          <li>
+            <a href="/">Projects</a>
+          </li>
+          <li>
+            <a href="/">News & Events</a>
+          </li>
+          <li>
+            <a href="/">Suppliers</a>
+          </li>
+          <li class="navigation-button">
+            <a href="/">Contact Us</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="landing-hero">
+        <figure
+          style="--about-background: url('../images/heros/about-us.jpg')"
+          class="landing-hero__background parallax"
+        >
+          <div class="gradient"></div>
+        </figure>
+        <div class="landing-hero__content">
+          <h1 class="heading">About Us</h1>
+        </div>
+      </section>
+
+      <section class="terms-and-conditions">
+        <div class="terms-and-conditions__content">
+          <p>
+            This website is owned and operated by OPULENT DESIGNS LIMITED, whose
+            contact details appear on the Contact Us page of this website (“we”,
+            “us”, “our”).
+          </p>
+          <br />
+          <p>
+            By accessing this website (“Site”) the user (“you”, “your”) agree to
+            be bound by these Terms and Conditions (“Conditions”). Please also
+            read our Privacy Policy and Cookie Policy with regard to use of your
+            personal information.
+          </p>
+          <h2>1. Use of this Site</h2>
+        </div>
+      </section>
+
+      <footer>
+        <div class="footer-wrapper">
+          <div class="footer-wrapper__contacts">
+            <h6 class="heading">Contact Us</h6>
+            <ul class="contact-list">
+              <li class="member-info">
+                <p class="name">Alister Bennett</p>
+                <p class="title">CEO, Founder</p>
+                <a href="/" class="email">
+                  <span class="material-symbols-outlined"> mail </span>
+                  alister@opulentdesignsinternational.com
+                </a>
+                <a href="/" class="email">
+                  <span class="material-symbols-outlined"> call </span>
+                  +44 7986 239515
+                </a>
+              </li>
+
+              <li class="member-info">
+                <p class="name">Tom Wilton</p>
+                <p class="title">
+                  Business Development Director (UK and Middle East)
+                </p>
+                <a href="/" class="email">
+                  <span class="material-symbols-outlined"> mail </span>
+                  alister@opulentdesignsinternational.com
+                </a>
+                <a href="/" class="email">
+                  <span class="material-symbols-outlined"> call </span>
+                  +44 7986 239515
+                </a>
+              </li>
+
+              <li class="member-info">
+                <p class="name">Will Wilton</p>
+                <p class="title">
+                  Business Development Director (Marine and Automotive)
+                </p>
+                <a href="/" class="email">
+                  <span class="material-symbols-outlined"> mail </span>
+                  alister@opulentdesignsinternational.com
+                </a>
+                <a href="/" class="email">
+                  <span class="material-symbols-outlined"> call </span>
+                  +44 7986 239515
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-wrapper__links">
+            <h6 class="heading">Discover</h6>
+            <ul class="links-list">
+              <li class="link">
+                <a href="">Residential</a>
+              </li>
+              <li class="link">
+                <a href="">Marine</a>
+              </li>
+              <li class="link">
+                <a href="">Hospitality</a>
+              </li>
+              <li class="link">
+                <a href="">Automotive</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-wrapper__socials">
+            <h6 class="heading">Follow Us</h6>
+            <ul class="socials-list">
+              <li class="social">
+                <a href="/">Instagram</a>
+              </li>
+              <li class="social">
+                <a href="/">LinkedIn</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="company-copy">
+          <p class="opulent-copy">
+            Copyright 2022 Opulent Designs International Ltd
+          </p>
+          <a class="policy" href="">Terms & Conditions</a>
+          <p class="aztec-copy">
+            Designed by <a href="/">AztecMedia</a>, part of the
+            <a href="/">Yeomedia Group</a>
+          </p>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>

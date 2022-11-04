@@ -1708,13 +1708,10 @@ body {
   font-weight: bold;
 }
 
-/*——————————————————————
+html {
+  scroll-behavior: smooth;
+}
 
-[Table of contents]
-
-1.
-
-——————————————————————-*/
 html,
 body {
   width: 100%;
@@ -2941,7 +2938,7 @@ footer .company-copy .aztec-copy {
 .coming-soon__hero {
   position: relative;
   z-index: -1;
-  background-image: url("../images/heros/marine.webp");
+  background-image: var(--about-background);
   height: 50vh;
   display: grid;
   place-items: center;
@@ -3257,6 +3254,7 @@ footer .company-copy .aztec-copy {
   }
 }
 
+/*===CONTACT FORM (HOMEPAGE)=== */
 .contact-form {
   width: 100%;
   background-color: var(--clr-white);
@@ -3334,5 +3332,47 @@ footer .company-copy .aztec-copy {
     margin-inline: auto;
     padding: 1.5rem 2rem;
     margin-right: 0;
+  }
+}
+
+/*===TERMS AND CONDITIONS PAGE=== */
+.terms-and-conditions {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  background-color: var(--clr-white);
+}
+.terms-and-conditions__content {
+  width: calc(100% - 4rem);
+  margin-inline: auto;
+  max-width: 1000px;
+}
+.terms-and-conditions__content p {
+  font-size: 1.1rem;
+  line-height: 150%;
+  opacity: 0.8;
+}
+.terms-and-conditions__content h2,
+.terms-and-conditions__content h3,
+.terms-and-conditions__content h4,
+.terms-and-conditions__content h5,
+.terms-and-conditions__content h6 {
+  font-size: 1.8rem;
+  color: var(--clr-black);
+  opacity: 0.8;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  line-height: 2rem;
+  font-weight: bold;
+}
+.terms-and-conditions__content strong {
+  font-weight: bold;
+}
+@media (min-width: 1024px) {
+  .terms-and-conditions {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+  .terms-and-conditions p {
+    font-size: 1.2rem;
   }
 }/*# sourceMappingURL=style.css.map */
