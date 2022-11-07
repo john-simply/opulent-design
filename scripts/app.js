@@ -54,9 +54,15 @@ function changeLift(isNext) {
 
   // landing content changes
   if (liftText) {
-    liftText.innerHTML = `Cabin - ${
-      liftLabels[currentIndex - 1].label
-    } <span>0${currentIndex} / 0${liftLabels.length}</span>`;
+    liftText.style.opacity = 0;
+
+    setTimeout(() => {
+      liftText.innerHTML = `Cabin - ${
+        liftLabels[currentIndex - 1].label
+      } <span>0${currentIndex} / 0${liftLabels.length}</span>`;
+
+      liftText.style.opacity = 1;
+    }, 1200);
 
     setTimeout(() => {
       liftImage.src = `./images/lifts/product-image-${currentIndex}.png`;
@@ -78,7 +84,11 @@ function changeLift(isNext) {
   // splide changes
   const label = document.querySelector('.lift-label');
   carbonSplide.go(currentIndex - 1);
-  label.innerHTML = liftLabels[currentIndex - 1].label;
+  label.style.opacity = 0;
+  setTimeout(() => {
+    label.innerHTML = liftLabels[currentIndex - 1].label;
+    label.style.opacity = 1;
+  }, 600);
 
   // disables button to prevent spam when changing slides...
   document.querySelectorAll('.splide__arrow').forEach((e) => {

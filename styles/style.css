@@ -1963,6 +1963,9 @@ body {
   display: none;
   font-weight: bold;
 }
+.main-content .lift-wrapper__buttons .text-wrapper p {
+  transition: opacity 0.3s ease-in-out;
+}
 .main-content .lift-wrapper__buttons .text-wrapper span {
   color: #8e8c8c;
   margin-left: 1rem;
@@ -2364,6 +2367,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: opacity 0.3s ease-in-out;
 }
 .carbon-lift-slider .lift-label::before {
   content: "";

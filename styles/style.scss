@@ -317,6 +317,11 @@ body {
         display: none;
 
         font-weight: bold;
+
+        p {
+          transition: opacity 0.3s ease-in-out;
+        }
+
         span {
           color: #8e8c8c;
           margin-left: 1rem;
@@ -847,6 +852,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+
+    transition: opacity 0.3s ease-in-out;
 
     &::before {
       content: '';
