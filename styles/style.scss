@@ -466,14 +466,14 @@ body {
         // added to size image for absolute position
         position: relative;
         width: 100%;
-        height: 800px;
+        height: 700px;
 
-        max-width: 700px;
+        max-width: 650px;
         img {
           position: absolute;
           left: 0px;
 
-          max-width: 700px;
+          max-width: 650px;
         }
       }
     }
@@ -486,7 +486,8 @@ body {
   place-items: center;
 
   width: 100%;
-  height: 100vh;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
 
   &__content {
     .heading {
@@ -543,6 +544,10 @@ body {
   @include laptop() {
     background-image: url('../images/black-carbon.jpg');
     background-size: contain;
+
+    height: 100vh;
+    padding-top: unset;
+    padding-bottom: unset;
 
     &__wrapper {
       display: grid;

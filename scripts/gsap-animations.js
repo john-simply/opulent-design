@@ -84,6 +84,8 @@ menuTimeline.from(menuItems, {
 
 window.addEventListener('load', () => {
   if (document.querySelector('.lift-wrapper')) {
-    liftScrollInit();
+    if (window.screen.width >= 1024) {
+      liftScrollInit();
+    }
   }
 });

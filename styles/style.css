@@ -2080,13 +2080,13 @@ body {
   .main-content .lift-wrapper__image-wrapper {
     position: relative;
     width: 100%;
-    height: 800px;
-    max-width: 700px;
+    height: 700px;
+    max-width: 650px;
   }
   .main-content .lift-wrapper__image-wrapper img {
     position: absolute;
     left: 0px;
-    max-width: 700px;
+    max-width: 650px;
   }
 }
 
@@ -2095,7 +2095,8 @@ body {
   display: grid;
   place-items: center;
   width: 100%;
-  height: 100vh;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
 }
 .suppliers-block__content .heading {
   font-weight: bold;
@@ -2143,6 +2144,9 @@ body {
   .suppliers-block {
     background-image: url("../images/black-carbon.jpg");
     background-size: contain;
+    height: 100vh;
+    padding-top: unset;
+    padding-bottom: unset;
   }
   .suppliers-block__wrapper {
     display: grid;
