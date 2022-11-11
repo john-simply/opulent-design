@@ -315,7 +315,6 @@ body {
 
       .text-wrapper {
         display: none;
-
         font-weight: bold;
 
         p {
@@ -338,13 +337,21 @@ body {
 
         padding: 0.3rem;
         margin-inline: 0.5rem;
+        span {
+          transform: rotate(-90deg);
+          @include desktop() {
+            transform: unset;
+          }
+        }
       }
     }
 
     &__image-wrapper {
       margin-top: 2rem;
+      overflow: hidden;
       img {
         max-width: 300px;
+        transition: transform 0.8s ease-in-out;
       }
     }
   }
@@ -412,9 +419,7 @@ body {
 
       &__image-wrapper {
         grid-area: image;
-        overflow: hidden;
         img {
-          transition: transform 0.8s ease-in-out;
           max-width: 500px;
         }
       }
@@ -994,9 +999,14 @@ footer {
 
       .socials-list {
         .social {
-          margin-top: 0.75rem;
+          margin-top: 1.5rem;
           display: flex;
           align-items: center;
+          justify-content: center;
+
+          @include laptop() {
+            justify-content: flex-start;
+          }
 
           &:hover {
             svg {
@@ -1088,6 +1098,10 @@ footer {
           font-size: 1.2rem;
           margin-bottom: 1.5rem;
         }
+      }
+
+      .socials-list {
+        justify-content: flex-start;
       }
 
       &__socials {
